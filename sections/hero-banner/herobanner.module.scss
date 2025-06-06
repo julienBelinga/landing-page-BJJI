@@ -1,0 +1,36 @@
+@use "../../styles/variables" as *;
+
+.herobanner {
+  height: 100dvh;
+  padding-top: 100px;
+
+  .herobannerDisplay {
+    display: flex;
+    flex-direction: row;
+
+    .herobannerText {
+      font-family: $font-title;
+      font-size: 3.5rem;
+      margin: 0;
+      height: 100%;
+      .herobannerParagraph1 {
+        color: $text-color-light-blue;
+      }
+
+      .herobannerParagraph2 {
+        color: $text-color-dark-blue;
+      }
+    }
+
+    .herobannerImages {
+      text-align: center;
+      align-self: center;
+      font-family: $font-title;
+      font-size: 10rem;
+
+      width: 80%;
+      color: white;
+      background-color: red;
+    }
+  }
+}
