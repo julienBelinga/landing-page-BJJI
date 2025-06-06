@@ -1,0 +1,49 @@
+@use "../../styles/variables" as *;
+
+.navbar {
+  position: fixed;
+  background-color: $background-color-navbar;
+  width: 100%;
+  padding: 0.5em 1em;
+  color: $text-color-light;
+  align-items: center;
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  .navbarTitle {
+    font-family: $font-bar-title;
+    font-size: $font-size-title-navbar;
+    margin: 0;
+  }
+
+  .navbarList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-family: $font-title;
+    font-size: $font-size-text-navbar;
+
+    .navbarListElement {
+      margin: 0 0.5em;
+    }
+  }
+
+  .navbarButton {
+    font-family: $font-text;
+    font-size: $font-size-button-navbar;
+    font-weight: bold;
+    color: $text-color-light-blue;
+    padding: 15px 24px;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    margin-left: auto;
+
+    &:hover {
+      color: $text-color-light;
+      background-color: $background-color-button-hover;
+      box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}
