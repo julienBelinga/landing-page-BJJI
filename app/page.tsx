@@ -1,3 +1,11 @@
+import Herobanner from "@/sections/hero-banner/herobanner";
+import Intro from "@/sections/intro/intro";
+
 export default function Home() {
-  return <div>Hello world</div>;
+  return (
+    <>
+      <Herobanner />
+      <Intro />
+    </>
+  );
 }
