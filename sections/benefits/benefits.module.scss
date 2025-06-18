@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *;
+
+.benefits {
+  margin-top: 3em;
+  .benefitsTitle {
+    color: $text-color-dark-blue;
+    font-family: $font-title;
+    font-size: $font-size-title-main;
+  }
+  .benefitsContainer {
+    display: flex;
+    padding: 1.5em;
+
+    .benefitsText {
+      color: $text-color-light;
+      font-family: $font-text;
+      font-size: $font-size-text-main;
+    }
+
+    .benefitsImage {
+      margin: 2em 7.5em;
+    }
+  }
+}
