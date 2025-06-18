@@ -1,0 +1,16 @@
+@use "../../styles/variables" as *;
+
+.argument {
+  display: flex;
+  margin: 3em 0em;
+
+  .textArgument {
+    align-content: center;
+  }
+  .iconArgument {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    margin: 0 1em;
+  }
+}
