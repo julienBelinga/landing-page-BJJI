@@ -13,12 +13,34 @@
       font-size: 3.5rem;
       margin: 0;
       height: 100%;
+      padding-top: 15%;
+
       .herobannerParagraph1 {
         color: $text-color-light-blue;
       }
 
       .herobannerParagraph2 {
         color: $text-color-dark-blue;
+      }
+
+      .downloads {
+        display: flex;
+
+        .button {
+          border: none;
+          border-radius: 12px;
+          margin: 0.5em;
+          padding: 18px 23px;
+          background-color: black;
+
+          img {
+            height: auto;
+            width: 150px;
+          }
+          &:hover {
+            background-color: $background-color-button-hover;
+          }
+        }
       }
     }
 
@@ -29,8 +51,6 @@
       font-size: 10rem;
 
       width: 80%;
-      color: white;
-      background-color: red;
     }
   }
 }
