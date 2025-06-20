@@ -8,18 +8,21 @@ export default function Functionalities() {
       <div className={styles.functionalitiesTitle}>Fonctionnalités clés</div>
       <div className={styles.functionalitiesContainer}>
         <Arguments
+          className={styles.functionalitiesArguments}
           image={icon}
           description="Icône fonctionnalité"
           text="Pose une question en 1 clic, reçois une réponse vidéo personnalisée."
         />
 
         <Arguments
+          className={styles.functionalitiesArguments}
           image={icon}
           description="Icône fonctionnalité"
           text="Demande des conseils techniques, mentaux ou stratégiques."
         />
 
         <Arguments
+          className={styles.functionalitiesArguments}
           image={icon}
           description="Icône fonctionnalité"
           text="Accède à des athlètes du monde entier."

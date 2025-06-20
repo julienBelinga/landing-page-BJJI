@@ -50,3 +50,43 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .navbar {
+    .navbarTitle {
+      font-size: $font-size-title-navbar-1000px;
+    }
+
+    .navbarList {
+      font-size: $font-size-button-navbar-1000px;
+    }
+
+    .navbarButton {
+      font-size: $font-size-text-navbar-1000px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    .navbarTitle {
+      font-size: $font-size-title-navbar-800px;
+    }
+
+    .navbarList {
+      //font-size: $font-size-text-navbar-800px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    .navbarTitle {
+      //font-size: $font-size-title-navbar-800px;
+    }
+
+    .navbarList {
+      font-size: $font-size-text-navbar-650px;
+    }
+  }
+}

@@ -9,12 +9,16 @@ $font-text: "Droid Sans", sans-serif;
 
 //TEXT-COLOR
 $text-color-light: #ffffff;
+$text-color-shade: #edeff3;
+$text-color-dark: #d9d9d9;
 $text-color-light-blue: #81b1fa;
 $text-color-dark-blue: #5994ed;
 
 //BACKGROUNG-COLOR
 $background-color-navbar: #5994ed;
 $background-color-main: #d9d9d9;
+$background-color-main-argument: #ffffff;
+$background-color-main-quote: #81b1fa;
 $background-color-footer: #2e3035;
 
 $background-color-button-hover: #4a7fce;
@@ -24,5 +28,12 @@ $font-size-title-navbar: 2.5rem;
 $font-size-text-navbar: 1.5rem;
 $font-size-button-navbar: 1rem;
 
-$font-size-title-main: 2.5rem;
+$font-size-title-navbar-1000px: 2rem;
+$font-size-text-navbar-1000px: 1.2rem;
+$font-size-button-navbar-1000px: 0.5rem;
+
+$font-size-title-navbar-800px: 1.5rem;
+$font-size-text-navbar-650px: 1rem;
+
+$font-size-title-main: 3rem;
 $font-size-text-main: 2rem;

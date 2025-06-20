@@ -2,7 +2,6 @@
 
 .argument {
   display: flex;
-  margin: 3em 0em;
 
   .textArgument {
     align-content: center;
@@ -12,5 +11,11 @@
     width: 50px;
     border-radius: 10px;
     margin: 0 1em;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
   }
+}
+.userArgument {
+  color: $text-color-dark;
+  text-align: right;
+  padding-right: 2.5em;
 }

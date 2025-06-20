@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+
+.athleteQuote {
+  position: relative;
+
+  .athleteQuoteBackground {
+    background-color: $background-color-main-quote;
+    padding: 1em;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 25%;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+
+    .athleteQuoteText {
+      color: $text-color-light;
+      font-family: $font-text;
+      font-size: $font-size-text-main;
+      text-align: right;
+      padding: 2em 5em;
+    }
+
+    .imageContainer {
+      position: absolute;
+      transform: translateY(-59%);
+
+      img {
+        height: 450px;
+        width: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}
