@@ -1,58 +1,94 @@
 import styles from "./gridHerobanner.module.scss";
-import Image, { StaticImageData } from "next/image";
-import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import Box from "@mui/material/Box";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
+import Image from "next/image";
+
+// TODO: get the Images and data from firebase storage when Athletes will be registered
+import expert1 from "@/assets/experts/expert1.jpg";
+import expert2 from "@/assets/experts/expert2.jpg";
+import expert3 from "@/assets/experts/expert3.jpg";
+import expert4 from "@/assets/experts/expert4.jpg";
+import expert5 from "@/assets/experts/expert5.jpg";
+import sanji from "@/assets/experts/expert6.jpg";
 
 type Expert = {
   name: string;
   title: string;
-  image: string | StaticImageData;
+  description: string;
+  image: string;
 };
 
-type GridHerobannerProps = {
-  experts: Expert[];
-};
+const experts = [
+  {
+    name: "Monkey D. Luffy",
+    title: "Captain of the Straw Hat Pirates",
+    description:
+      "Dreams of becoming the Pirate King. Has eaten the Gum-Gum fruit.",
+    image: expert1,
+  },
+  {
+    name: "Roronoa Zoro",
+    title: "Swordsman",
+    description:
+      "Master of the three sword style. Dreams of becoming the world's greatest swordsman.",
+    image: expert3,
+  },
+  {
+    name: "Nami",
+    title: "Navigator",
+    description: "Expert cartographer and weather manipulator. Loves treasure.",
+    image: expert2,
+  },
+  {
+    name: "Brook",
+    title: "Musician",
+    description:
+      "The undead gentleman with a soul. Skilled with a sword and violin.",
+    image: expert4,
+  },
+  {
+    name: "Nico Robin",
+    title: "Archaeologist",
+    description: "Can read poneglyphs. Searching for the True History.",
+    image: expert5,
+  },
+  {
+    name: "Sanji",
+    title: "Cook",
+    description:
+      "Master chef and martial artist. Uses only his legs in combat.",
+    image: sanji,
+  },
+];
 
-export default function GridHerobanner({ experts }: GridHerobannerProps) {
+export default function GridHerobanner() {
   return (
-    <section className={styles.gridHerobanner}>
-      <Grid container spacing={4} justifyContent="center">
-        {experts.map((expert) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={expert.name}>
-            <Card elevation={2}>
-              <Card elevation={3} className={styles.card}>
-                <Box className={styles.box}>
-                  <Image
-                    src={
-                      typeof expert.image === "string"
-                        ? expert.image
-                        : expert.image.src
-                    }
-                    alt={expert.name}
-                    fill
-                    className={styles.image}
-                  />
-                </Box>
-                <CardContent>
-                  <Typography variant="h6" align="center">
-                    {expert.name}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    align="center"
-                  >
-                    {expert.title}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Card>
-          </Grid>
+    <article className={styles.gridHerobanner}>
+      <div className={styles.grid}>
+        {experts.map((expert, index) => (
+          <div
+            key={expert.name}
+            className={`${styles.card} ${styles[`card${index + 1}`]}`}
+          >
+            <div className={styles.cardInner}>
+              <div className={styles.cardFront}>
+                <Image
+                  src={expert.image}
+                  alt={expert.name}
+                  fill
+                  className={styles.image}
+                  priority={index === 0} // Luffy est prioritaire pour le LCP
+                />
+              </div>
+              <div className={styles.cardBack}>
+                <div className={styles.backContent}>
+                  <div className={styles.name}>{expert.name}</div>
+                  <div className={styles.title}>{expert.title}</div>
+                  <div className={styles.description}>{expert.description}</div>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
-      </Grid>
-    </section>
+      </div>
+    </article>
   );
 }

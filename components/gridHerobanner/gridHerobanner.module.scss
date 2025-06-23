@@ -1,39 +1,243 @@
 @use "../../styles/variables" as *;
 
 .gridHerobanner {
-  padding: 0px;
-  margin: 10px;
-  display: flex;
-  z-index: 0;
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 
-  .card {
+  @media (min-width: 640px) {
+    padding: 20px;
+  }
+
+  @media (min-width: 900px) {
+    padding: 24px;
+  }
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  // Style Minnect adaptatif : Mobile/Tablette (2 colonnes, 4 lignes)
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr) minmax(
+      140px,
+      1fr
+    );
+  gap: clamp(12px, 2vw, 20px) clamp(8px, 1.5vw, 16px);
+
+  @media (min-width: 640px) {
+    grid-template-rows: minmax(180px, 1fr) minmax(180px, 1fr) minmax(180px, 1fr) minmax(
+        180px,
+        1fr
+      );
+  }
+
+  @media (min-width: 768px) {
+    // Utilise tout l'espace disponible avec proportions fixes
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) minmax(
+        200px,
+        1fr
+      );
+    gap: clamp(16px, 2.5vw, 24px) clamp(12px, 2vw, 20px);
+  }
+
+  @media (min-width: 1024px) {
+    // Garde les proportions mais utilise l'espace
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(160px, 1fr) minmax(160px, 1fr) minmax(160px, 1fr) minmax(
+        160px,
+        1fr
+      );
+    gap: clamp(16px, 2.5vw, 24px) clamp(12px, 2vw, 20px);
+  }
+
+  // Desktop XL : 3 colonnes adaptatives
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(180px, 1fr) minmax(180px, 1fr) minmax(180px, 1fr) minmax(
+        180px,
+        1fr
+      );
+    gap: clamp(20px, 3vw, 32px) clamp(16px, 2.5vw, 24px);
+    max-width: 1200px; // Limite maximale pour très grands écrans
+  }
+}
+
+.card {
+  perspective: 1200px;
+  position: relative;
+  border-radius: 16px;
+
+  &Inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    // Empêche l'agrandissement lors de la rotation
+    transform-origin: center center;
+  }
+
+  &:hover &Inner {
+    transform: rotateY(180deg) scale(1); // Forcer l'échelle à 1
+  }
+
+  &Front,
+  &Back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    // Assurer que les faces restent à la même taille
+    transform-origin: center center;
+  }
 
-    &:hover {
-      transform: scale(1.05);
-      z-index: 1;
-    }
+  &Front {
+    background: #000;
+  }
 
-    .box {
-      position: relative;
-      width: 100%;
-      min-height: 200px;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-    }
+  &Back {
+    background: #f9f9f9;
+    transform: rotateY(180deg);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
 
-    .image {
-      object-fit: cover;
-      border-radius: 0;
-      width: 100%;
-      height: auto;
-      display: block;
-      position: relative;
-    }
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+}
+
+// Content styles
+.backContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.name {
+  font-weight: 700;
+  font-size: clamp(14px, 3vw, 18px);
+  margin: 0;
+  line-height: 1.1;
+  word-wrap: break-word;
+}
+
+.title {
+  font-size: clamp(12px, 2.5vw, 14px);
+  margin: 0;
+  line-height: 1.2;
+  word-wrap: break-word;
+  color: #333;
+}
+
+.description {
+  font-size: clamp(10px, 2vw, 12px);
+  color: #666;
+  line-height: 1.3;
+  margin: 0;
+  word-wrap: break-word;
+  hyphens: auto;
+  // Suppression du line-clamp pour éviter la coupure
+  overflow: visible;
+  text-align: center;
+
+  // Responsive : ajuster encore plus sur mobile
+  @media (max-width: 640px) {
+    font-size: clamp(9px, 2.5vw, 11px);
+    line-height: 1.2;
+  }
+}
+
+// Positioning logic - Reproduction exacte de Minnect
+.card1 {
+  // Luffy = Chris Cuomo (grande carte principale)
+  // col-start-1 col-end-2 row-start-1 row-end-3
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  // Reste identique sur tous les breakpoints
+}
+
+.card2 {
+  // Zoro = Terrence Howard
+  // col-start-1 col-end-2 row-start-4 row-end-5 xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-2
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+
+  @media (min-width: 1280px) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.card3 {
+  // Nami = Paul Saladino
+  // col-start-1 col-end-2 row-start-3 row-end-4 xl:col-start-3 xl:col-end-4 xl:row-start-1 xl:row-end-3
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+
+  @media (min-width: 1280px) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+}
+
+.card4 {
+  // Brook = Thomas Ellsworth
+  // col-start-2 col-end-3 row-start-4 row-end-5 xl:col-start-1 xl:col-end-2 xl:row-start-3 xl:row-end-4
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+
+  @media (min-width: 1280px) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}
+
+.card5 {
+  // Robin = Patrick Bet-David (grande carte verticale à droite)
+  // col-start-2 col-end-3 row-start-2 row-end-4
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+  // Reste identique sur tous les breakpoints
+}
+
+.card6 {
+  // Sanji = Lindy Li
+  // col-start-2 col-end-3 row-start-1 row-end-2 xl:col-start-3 xl:col-end-4 xl:row-start-3 xl:row-end-4
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  @media (min-width: 1280px) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
   }
 }

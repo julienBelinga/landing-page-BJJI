@@ -4,10 +4,25 @@
   height: 100dvh;
   padding-top: 100px;
   margin-bottom: 7.5em;
+  display: flex;
+  flex-direction: row;
+
+  // Responsive : passer en column quand pas assez de place
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    height: auto;
+    padding-top: 80px;
+  }
 
   .herobannerDisplay {
     display: flex;
     flex-direction: row;
+
+    // Responsive : passer en column quand pas assez de place
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 40px;
+    }
 
     .herobannerText {
       font-family: $font-title;
@@ -15,6 +30,16 @@
       margin: 0;
       height: 100%;
       padding-top: 15%;
+
+      @media (max-width: 1024px) {
+        font-size: 2.5rem;
+        padding-top: 0;
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        font-size: 2rem;
+      }
 
       .herobannerParagraph1 {
         color: $text-color-light-blue;
@@ -44,15 +69,6 @@
           }
         }
       }
-    }
-
-    .herobannerImages {
-      text-align: center;
-      align-self: center;
-      font-family: $font-title;
-      font-size: 10rem;
-
-      width: 80%;
     }
   }
 }
