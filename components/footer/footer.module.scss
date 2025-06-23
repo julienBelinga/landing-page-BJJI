@@ -1,1 +1,46 @@
 @use "../../styles/variables" as *;
+
+.footer {
+  background-color: $background-color-footer;
+  padding: 0.5em 1em;
+  display: flex;
+
+  .footerTitle {
+    color: $text-color-light;
+    font-family: $font-bar-title;
+    font-size: $font-size-title-navbar;
+  }
+  .footerText {
+    color: $text-color-light;
+    font-family: $font-text;
+    font-weight: bold;
+  }
+
+  .footerDownloadList,
+  .footerTermsList {
+    color: $text-color-light;
+    font-family: $font-text;
+    list-style: none;
+
+    .footerListTitle {
+      font-weight: bold;
+    }
+  }
+}
+
+//RESPONSIVE
+@media (max-width: 1000px) {
+  .footer {
+    .footerTitle {
+      font-size: $font-size-title-navbar-1000px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    .footerTitle {
+      font-size: $font-size-title-navbar-800px;
+    }
+  }
+}

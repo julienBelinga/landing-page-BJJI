@@ -14,6 +14,21 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 
+  .navbarLink {
+    color: $text-color-light;
+    text-decoration: none;
+  }
+
+  .navbarLinkList {
+    color: $text-color-light;
+    text-decoration: none;
+
+    &:hover {
+      color: $text-color-dark;
+      transition-duration: 0.4s;
+    }
+  }
+
   .navbarTitle {
     font-family: $font-bar-title;
     font-size: $font-size-title-navbar;
@@ -47,6 +62,51 @@
       color: $text-color-light;
       background-color: $background-color-button-hover;
       box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    .navbarTitle {
+      font-size: $font-size-title-navbar-1000px;
+    }
+
+    .navbarList {
+      font-size: 1.5rem;
+    }
+
+    .navbarButton {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    .navbarTitle {
+      font-size: $font-size-title-navbar-800px;
+    }
+
+    .navbarList {
+      font-size: 1.2rem;
+    }
+
+    .navbarButton {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    .navbarList {
+      font-size: 1rem;
+    }
+
+    .navbarButton {
+      font-size: 0.6rem;
+      padding: 10px 18px;
     }
   }
 }

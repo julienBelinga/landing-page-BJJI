@@ -1,0 +1,47 @@
+@use "../../styles/variables" as *;
+
+.callToAction {
+  margin-top: 5.5em;
+
+  .callToActionTitle {
+    color: $text-color-dark-blue;
+    font-family: $font-title;
+    font-size: $font-size-title-main;
+  }
+  .callToActionContainer {
+    display: flex;
+
+    .callToActionDisplay {
+      width: 60%;
+      .callToActionText {
+        color: $text-color-light-blue;
+        font-family: $font-title;
+        font-size: 2.5rem;
+      }
+
+      .downloads {
+        display: flex;
+
+        .button {
+          border: none;
+          border-radius: 12px;
+          margin: 0.5em;
+          padding: 18px 23px;
+          background-color: black;
+
+          img {
+            height: auto;
+            width: 150px;
+          }
+          &:hover {
+            background-color: $background-color-button-hover;
+            transition-duration: 0.4s;
+          }
+        }
+      }
+    }
+
+    .callToActionImage {
+    }
+  }
+}

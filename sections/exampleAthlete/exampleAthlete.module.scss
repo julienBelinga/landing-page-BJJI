@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+
+.exampleAthlete {
+  .exampleAthleteTitle {
+    color: $text-color-dark-blue;
+    font-family: $font-title;
+    font-size: $font-size-title-main;
+  }
+  .profil1,
+  .profil2 {
+    margin: 3em 0em;
+    display: flex;
+    .profilText {
+      padding: 2em;
+      font-family: $font-text;
+      font-size: $font-size-text-main;
+      .profilPresentation {
+        color: $text-color-light;
+      }
+
+      .profilAnswer {
+        color: $text-color-shade;
+      }
+    }
+  }
+
+  .profil2 {
+    flex-direction: row-reverse;
+  }
+
+  .exampleAthleteLink {
+    font-family: $font-text;
+    font-weight: bold;
+    color: $text-color-light;
+    text-align: end;
+    font-size: $font-size-text-main;
+  }
+}
