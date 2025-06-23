@@ -75,6 +75,7 @@ export default function GridHerobanner() {
                   alt={expert.name}
                   fill
                   className={styles.image}
+                  priority={index === 0} // Luffy est prioritaire pour le LCP
                 />
               </div>
               <div className={styles.cardBack}>

@@ -1,54 +1,71 @@
 @use "../../styles/variables" as *;
 
 .gridHerobanner {
-  padding: 40px 20px;
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  // background-color: red;
+
+  @media (min-width: 640px) {
+    padding: 20px;
+  }
+
+  @media (min-width: 900px) {
+    padding: 24px;
+  }
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: repeat(6, 120px);
-  gap: 12px;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+
+  // Style Minnect exact : Mobile/Tablette (2 colonnes, 4 lignes)
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 173px 173px 173px 173px;
+  gap: 20px 16px;
 
   @media (min-width: 640px) {
-    grid-template-rows: repeat(6, 140px);
-    gap: 16px;
+    grid-template-rows: 244px 244px 244px 244px;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 400px 180px 180px;
-    grid-template-rows: repeat(6, 160px);
-    gap: 20px;
+    grid-template-columns: 344px 344px;
+    grid-template-rows: 344px 344px 344px 344px;
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: 350px 160px 160px;
-    grid-template-rows: repeat(6, 140px);
+    grid-template-columns: 212px 212px;
+    grid-template-rows: 212px 212px 212px 212px;
   }
 
+  // Desktop XL : 3 colonnes comme Minnect
   @media (min-width: 1280px) {
-    grid-template-columns: 420px 190px 190px;
-    grid-template-rows: repeat(6, 160px);
+    grid-template-columns: 212px 212px 212px;
+    // Garde 4 lignes mais ajuste la hauteur
+    grid-template-rows: 212px 212px 212px 212px;
   }
 }
 
 .card {
-  perspective: 1000px;
+  perspective: 1200px;
   position: relative;
+  border-radius: 16px;
 
   &Inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s ease;
+    transition: transform 0.6s ease;
     transform-style: preserve-3d;
+    // Empêche l'agrandissement lors de la rotation
+    transform-origin: center center;
   }
 
   &:hover &Inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) scale(1); // Forcer l'échelle à 1
   }
 
   &Front,
@@ -59,6 +76,8 @@
     backface-visibility: hidden;
     border-radius: 16px;
     overflow: hidden;
+    // Assurer que les faces restent à la même taille
+    transform-origin: center center;
   }
 
   &Front {
@@ -68,10 +87,13 @@
   &Back {
     background: #f9f9f9;
     transform: rotateY(180deg);
-    padding: 16px;
+    padding: 0.75rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
   }
 }
 
@@ -89,56 +111,111 @@
 .backContent {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: visible;
+  box-sizing: border-box;
 }
 
 .name {
   font-weight: 700;
+  font-size: clamp(14px, 3vw, 18px);
+  margin: 0;
+  line-height: 1.1;
+  word-wrap: break-word;
 }
 
 .title {
-  font-size: 14px;
+  font-size: clamp(12px, 2.5vw, 14px);
+  margin: 0;
+  line-height: 1.2;
+  word-wrap: break-word;
+  color: #333;
 }
 
 .description {
-  font-size: 12px;
-  color: #555;
+  font-size: clamp(10px, 2vw, 12px);
+  color: #666;
+  line-height: 1.3;
+  margin: 0;
+  word-wrap: break-word;
+  hyphens: auto;
+  // Suppression du line-clamp pour éviter la coupure
+  overflow: visible;
+  text-align: center;
+
+  // Responsive : ajuster encore plus sur mobile
+  @media (max-width: 640px) {
+    font-size: clamp(9px, 2.5vw, 11px);
+    line-height: 1.2;
+  }
 }
 
-// Positioning logic pour les cartes - Style Minnect
+// Positioning logic - Reproduction exacte de Minnect
 .card1 {
-  // Luffy - Grande carte principale à gauche (comme Minnect)
+  // Luffy = Chris Cuomo (grande carte principale)
+  // col-start-1 col-end-2 row-start-1 row-end-3
   grid-column: 1 / 2;
-  grid-row: 1 / 7;
+  grid-row: 1 / 3;
+  // Reste identique sur tous les breakpoints
 }
 
 .card2 {
-  // Zoro - Petite carte en haut à droite
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  // Zoro = Terrence Howard
+  // col-start-1 col-end-2 row-start-4 row-end-5 xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-2
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+
+  @media (min-width: 1280px) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 }
 
 .card3 {
-  // Nami - Petite carte en haut à droite
-  grid-column: 3 / 4;
-  grid-row: 1 / 3;
+  // Nami = Paul Saladino
+  // col-start-1 col-end-2 row-start-3 row-end-4 xl:col-start-3 xl:col-end-4 xl:row-start-1 xl:row-end-3
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+
+  @media (min-width: 1280px) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
 }
 
 .card4 {
-  // Brook - Petite carte au milieu à droite
-  grid-column: 2 / 4;
-  grid-row: 3 / 5;
+  // Brook = Thomas Ellsworth
+  // col-start-2 col-end-3 row-start-4 row-end-5 xl:col-start-1 xl:col-end-2 xl:row-start-3 xl:row-end-4
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+
+  @media (min-width: 1280px) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
 }
 
 .card5 {
-  // Robin - Petite carte en bas à droite
+  // Robin = Patrick Bet-David (grande carte verticale à droite)
+  // col-start-2 col-end-3 row-start-2 row-end-4
   grid-column: 2 / 3;
-  grid-row: 5 / 7;
+  grid-row: 2 / 4;
+  // Reste identique sur tous les breakpoints
 }
 
 .card6 {
-  // Sanji - Petite carte en bas à droite
-  grid-column: 3 / 4;
-  grid-row: 5 / 7;
+  // Sanji = Lindy Li
+  // col-start-2 col-end-3 row-start-1 row-end-2 xl:col-start-3 xl:col-end-4 xl:row-start-3 xl:row-end-4
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  @media (min-width: 1280px) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
 }
