@@ -1,12 +1,13 @@
 import styles from "./gridHerobanner.module.scss";
 import Image from "next/image";
 
-// Import des images locales
+// TODO: get the Images and data from firebase storage when Athletes will be registered
 import expert1 from "@/assets/experts/expert1.jpg";
 import expert2 from "@/assets/experts/expert2.jpg";
 import expert3 from "@/assets/experts/expert3.jpg";
 import expert4 from "@/assets/experts/expert4.jpg";
 import expert5 from "@/assets/experts/expert5.jpg";
+import sanji from "@/assets/experts/expert6.jpg";
 
 type Expert = {
   name: string;
@@ -48,6 +49,13 @@ const experts = [
     title: "Archaeologist",
     description: "Can read poneglyphs. Searching for the True History.",
     image: expert5,
+  },
+  {
+    name: "Sanji",
+    title: "Cook",
+    description:
+      "Master chef and martial artist. Uses only his legs in combat.",
+    image: sanji,
   },
 ];
 

@@ -38,7 +38,7 @@ export default function Herobanner() {
           </div>
         </div>
         <div className={styles.herobannerImages}>
-          <GridHerobanner experts={experts} />
+          <GridHerobanner />
         </div>
       </div>
     </section>

@@ -7,27 +7,31 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 173px);
-  gap: 16px 20px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(6, 120px);
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
 
   @media (min-width: 640px) {
-    grid-template-rows: repeat(4, 244px);
+    grid-template-rows: repeat(6, 140px);
+    gap: 16px;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 344px 344px;
-    grid-template-rows: repeat(4, 344px);
+    grid-template-columns: 400px 180px 180px;
+    grid-template-rows: repeat(6, 160px);
+    gap: 20px;
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: 212px 212px;
-    grid-template-rows: repeat(4, 212px);
+    grid-template-columns: 350px 160px 160px;
+    grid-template-rows: repeat(6, 140px);
   }
 
   @media (min-width: 1280px) {
-    grid-template-columns: 212px 212px 212px;
-    auto-rows: 212px;
+    grid-template-columns: 420px 190px 190px;
+    grid-template-rows: repeat(6, 160px);
   }
 }
 
@@ -102,41 +106,39 @@
   color: #555;
 }
 
-// Positioning logic à adapter dynamiquement
+// Positioning logic pour les cartes - Style Minnect
 .card1 {
+  // Luffy - Grande carte principale à gauche (comme Minnect)
   grid-column: 1 / 2;
+  grid-row: 1 / 7;
+}
+
+.card2 {
+  // Zoro - Petite carte en haut à droite
+  grid-column: 2 / 3;
   grid-row: 1 / 3;
 }
-.card2 {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-}
+
 .card3 {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  // Nami - Petite carte en haut à droite
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 
 .card4 {
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
-
-  @media (min-width: 1280px) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
+  // Brook - Petite carte au milieu à droite
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
 }
 
 .card5 {
+  // Robin - Petite carte en bas à droite
   grid-column: 2 / 3;
-  grid-row: 2 / 4;
+  grid-row: 5 / 7;
 }
 
 .card6 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-
-  @media (min-width: 1280px) {
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
-  }
+  // Sanji - Petite carte en bas à droite
+  grid-column: 3 / 4;
+  grid-row: 5 / 7;
 }
