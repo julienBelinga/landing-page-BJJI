@@ -4,6 +4,8 @@
   height: 100dvh;
   padding-top: 100px;
   margin-bottom: 7.5em;
+  display: flex;
+  flex-direction: row;
 
   .herobannerDisplay {
     display: flex;
@@ -43,15 +45,6 @@
           }
         }
       }
-    }
-
-    .herobannerImages {
-      text-align: center;
-      align-self: center;
-      font-family: $font-title;
-      font-size: 10rem;
-
-      width: 80%;
     }
   }
 }

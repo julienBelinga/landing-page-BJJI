@@ -61,7 +61,7 @@ const experts = [
 
 export default function GridHerobanner() {
   return (
-    <section className={styles.gridHerobanner}>
+    <article className={styles.gridHerobanner}>
       <div className={styles.grid}>
         {experts.map((expert, index) => (
           <div
@@ -88,6 +88,6 @@ export default function GridHerobanner() {
           </div>
         ))}
       </div>
-    </section>
+    </article>
   );
 }

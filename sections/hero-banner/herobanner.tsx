@@ -37,10 +37,8 @@ export default function Herobanner() {
             </button>
           </div>
         </div>
-        <div className={styles.herobannerImages}>
-          <GridHerobanner />
-        </div>
       </div>
+      <GridHerobanner />
     </section>
   );
 }
