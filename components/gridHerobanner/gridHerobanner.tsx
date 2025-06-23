@@ -29,13 +29,13 @@ const experts = [
     title: "Swordsman",
     description:
       "Master of the three sword style. Dreams of becoming the world's greatest swordsman.",
-    image: expert2,
+    image: expert3,
   },
   {
     name: "Nami",
     title: "Navigator",
     description: "Expert cartographer and weather manipulator. Loves treasure.",
-    image: expert3,
+    image: expert2,
   },
   {
     name: "Brook",
