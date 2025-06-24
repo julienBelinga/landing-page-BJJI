@@ -24,6 +24,13 @@
     }
   }
 
+  .profil1 {
+    .profilImage {
+      border-radius: 30px;
+      object-fit: cover;
+    }
+  }
+
   .profil2 {
     flex-direction: row-reverse;
   }

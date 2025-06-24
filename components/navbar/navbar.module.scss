@@ -66,6 +66,7 @@
   }
 }
 
+//RESPONSIVE
 @media (max-width: 1000px) {
   .navbar {
     .navbarTitle {
@@ -89,7 +90,7 @@
     }
 
     .navbarList {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
 
     .navbarButton {
@@ -101,7 +102,7 @@
 @media (max-width: 650px) {
   .navbar {
     .navbarList {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     .navbarButton {

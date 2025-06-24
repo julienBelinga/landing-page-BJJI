@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./benefits.module.scss";
+import Frame from "@/assets/phone.png";
 import Screen from "@/assets/screenExemple.png";
+import Test from "@/assets/nico.jpg";
 
 export default function Benefits() {
   return (
@@ -15,7 +17,16 @@ export default function Benefits() {
           minim veniam.
         </div>
         <div className={styles.benefitsImage}>
-          <Image src={Screen} alt="Image exemple" height={450} width={280} />
+          <Image
+            className={styles.phoneFrame}
+            src={Frame}
+            alt="Maquette de téléphone"
+          />
+          <Image
+            className={styles.phoneScreen}
+            src={Screen}
+            alt="Contenu de l'écran"
+          />
         </div>
       </div>
     </section>
