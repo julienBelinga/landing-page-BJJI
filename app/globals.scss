@@ -9,11 +9,6 @@ body {
   scroll-padding-top: 80px;
 }
 
-main {
-  padding: 2em;
-  background-color: $background-color-main;
-}
-
 .layout {
   display: flex;
   flex-direction: column;
@@ -21,5 +16,15 @@ main {
 }
 
 .content {
+  padding: 2em;
+  padding-bottom: calc(2em + 580px);
+  background-color: $background-color-main;
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+
+main {
+  padding: 2em;
+  background-color: $background-color-main;
   flex: 1;
 }

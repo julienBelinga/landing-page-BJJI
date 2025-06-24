@@ -3,6 +3,7 @@ import styles from "./callToAction.module.scss";
 import screen from "@/assets/screenExemple.png";
 import appstore from "@/assets/AppStore.png";
 import googleplay from "@/assets/googeplay.png";
+import PhoneFrame from "@/components/phoneFrame/phoneFrame";
 
 export default function CallToAction() {
   return (
@@ -24,9 +25,7 @@ export default function CallToAction() {
           </div>
         </div>
 
-        <div className={styles.callToActionImage}>
-          <Image src={screen} alt="Exemple d'écran" />
-        </div>
+        <PhoneFrame screenImage={screen} />
       </div>
     </section>
   );
