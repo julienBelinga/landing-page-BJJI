@@ -20,6 +20,52 @@
 
     .benefitsImage {
       margin: 2em 7.5em;
+
+      .phoneFrame {
+        position: absolute;
+        z-index: 2;
+        height: 600px;
+        width: auto;
+        top: 265%;
+        right: 10.3em;
+        overflow-x: hidden;
+      }
+
+      .phoneScreen {
+        z-index: 1;
+        height: 575px;
+        width: 280px;
+        border-radius: 30px;
+        object-fit: cover;
+        overflow-x: hidden;
+      }
+    }
+  }
+}
+
+//RESPONSIVE
+@media (max-width: 800px) {
+  .benefits {
+    .benefitsTitle {
+      font-size: $font-size-title-main-800px;
+    }
+
+    .benefitsContainer {
+      flex-direction: column;
+      .benefitsText {
+        font-size: $font-size-text-main-8OOpx;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .benefits {
+    .benefitsTitle {
+      font-size: $font-size-title-main-650px;
+    }
+    .benefitsText {
+      font-size: $font-size-text-main-65Opx;
     }
   }
 }
