@@ -3,6 +3,7 @@ import styles from "./benefits.module.scss";
 import Frame from "@/assets/phone.png";
 import Screen from "@/assets/screenExemple.png";
 import Test from "@/assets/nico.jpg";
+import PhoneFrame from "@/components/phoneFrame/phoneFrame";
 
 export default function Benefits() {
   return (
@@ -16,18 +17,7 @@ export default function Benefits() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam.
         </div>
-        <div className={styles.benefitsImage}>
-          <Image
-            className={styles.phoneFrame}
-            src={Frame}
-            alt="Maquette de téléphone"
-          />
-          <Image
-            className={styles.phoneScreen}
-            src={Screen}
-            alt="Contenu de l'écran"
-          />
-        </div>
+        <PhoneFrame />
       </div>
     </section>
   );

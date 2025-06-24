@@ -17,29 +17,6 @@
       font-size: $font-size-text-main;
       padding-top: 1.5em;
     }
-
-    .benefitsImage {
-      margin: 2em 7.5em;
-
-      .phoneFrame {
-        position: absolute;
-        z-index: 2;
-        height: 600px;
-        width: auto;
-        top: 265%;
-        right: 10.3em;
-        overflow-x: hidden;
-      }
-
-      .phoneScreen {
-        z-index: 1;
-        height: 575px;
-        width: 280px;
-        border-radius: 30px;
-        object-fit: cover;
-        overflow-x: hidden;
-      }
-    }
   }
 }
 

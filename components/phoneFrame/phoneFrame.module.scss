@@ -1,0 +1,20 @@
+.benefitsImage {
+  margin: 2em 7.5em;
+
+  .phoneFrame {
+    position: relative;
+    height: 600px;
+    width: auto;
+    top: -586px;
+    right: 9px;
+    overflow-x: hidden;
+  }
+
+  .phoneScreen {
+    height: 575px;
+    width: 280px;
+    border-radius: 30px;
+    object-fit: cover;
+    overflow-x: hidden;
+  }
+}
