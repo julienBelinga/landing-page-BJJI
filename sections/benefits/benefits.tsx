@@ -1,9 +1,6 @@
-import Image from "next/image";
 import styles from "./benefits.module.scss";
-import Frame from "@/assets/phone.png";
-import Screen from "@/assets/screenExemple.png";
-import Test from "@/assets/nico.jpg";
 import PhoneFrame from "@/components/phoneFrame/phoneFrame";
+import Screen from "@/assets/screenExemple.png";
 
 export default function Benefits() {
   return (
@@ -17,7 +14,7 @@ export default function Benefits() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam.
         </div>
-        <PhoneFrame />
+        <PhoneFrame screenImage={Screen} />
       </div>
     </section>
   );
