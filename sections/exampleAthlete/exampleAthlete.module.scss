@@ -11,7 +11,7 @@
     margin: 3em 0em;
     display: flex;
     .profilText {
-      padding: 2em;
+      padding: 2em 1em;
       font-family: $font-text;
       font-size: $font-size-text-main;
       .profilPresentation {
@@ -21,13 +21,6 @@
       .profilAnswer {
         color: $text-color-shade;
       }
-    }
-  }
-
-  .profil1 {
-    .profilImage {
-      border-radius: 30px;
-      object-fit: cover;
     }
   }
 
