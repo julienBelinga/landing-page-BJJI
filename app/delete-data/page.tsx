@@ -12,38 +12,7 @@ import {
 } from "@/components/ui/card";
 
 export default function DeleteDataPage() {
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setMessage("");
-
-    try {
-      const response = await fetch("/api/delete-data", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage("Demande de suppression envoyée avec succès !");
-        setEmail("");
-      } else {
-        setMessage(data.error || "Une erreur s'est produite");
-      }
-    } catch (error) {
-      setMessage("Erreur lors de l'envoi de la demande");
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <div className="container mx-auto py-10">
@@ -51,32 +20,32 @@ export default function DeleteDataPage() {
         <CardHeader>
           <CardTitle>Suppression de données</CardTitle>
           <CardDescription>
-            Demandez la suppression de vos données personnelles
+            Demandez la suppression de vos données personnelles.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <Input
-                type="email"
-                placeholder="Votre adresse e-mail"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <Button type="submit" disabled={isLoading} className="w-full">
-              {isLoading ? "Envoi en cours..." : "Demander la suppression"}
+          <form
+            action="https://formsubmit.co/julienbelinga.pro@gmail.com"
+            method="POST"
+            className="space-y-4"
+            onSubmit={() => setIsSubmitting(true)}
+          >
+            {/* Anti-spam / configuration */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="Demande de suppression de données" />
+            <input type="hidden" name="_next" value="https://bjj-insight.vercel.app/delete-data/success" />
+
+            <Input
+              type="email"
+              name="email"
+              placeholder="Votre adresse e-mail"
+              required
+            />
+
+            <Button type="submit" disabled={isSubmitting} className="w-full">
+              {isSubmitting ? "Envoi en cours..." : "Demander la suppression"}
             </Button>
-            {message && (
-              <p
-                className={`text-sm ${
-                  message.includes("succès") ? "text-green-600" : "text-red-600"
-                }`}
-              >
-                {message}
-              </p>
-            )}
           </form>
         </CardContent>
       </Card>

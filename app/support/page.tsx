@@ -13,40 +13,7 @@ import {
 } from "@/components/ui/card";
 
 export default function SupportPage() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [responseMessage, setResponseMessage] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setResponseMessage("");
-
-    try {
-      const response = await fetch("/api/contact-support", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, message }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setResponseMessage("Votre message a bien été envoyé.");
-        setEmail("");
-        setMessage("");
-      } else {
-        setResponseMessage(data.error || "Une erreur s’est produite.");
-      }
-    } catch (error) {
-      setResponseMessage("Erreur lors de l’envoi du message.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <div className="container mx-auto py-10">
@@ -59,37 +26,37 @@ export default function SupportPage() {
               href="mailto:julienboinga.pro@gmail.com"
               className="text-blue-600 underline"
             >
-              julienbelinga.pro@gmail.com
+              julienboinga.pro@gmail.com
             </a>
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            action="https://formsubmit.co/julienbelinga.pro@gmail.com"
+            method="POST"
+            className="space-y-4"
+            onSubmit={() => setIsSubmitting(true)}
+          >
+            {/* Anti-spam honeypot */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="Nouveau message de support" />
+            <input type="hidden" name="_next" value="https://bjj-insight.vercel.app/support/success" />
+
             <Input
               type="email"
+              name="email"
               placeholder="Votre adresse e-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <Textarea
+              name="message"
               placeholder="Décrivez votre problème ou votre question"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
               required
             />
-            <Button type="submit" disabled={isLoading} className="w-full">
-              {isLoading ? "Envoi en cours..." : "Envoyer"}
+            <Button type="submit" disabled={isSubmitting} className="w-full">
+              {isSubmitting ? "Envoi en cours..." : "Envoyer"}
             </Button>
-            {responseMessage && (
-              <p
-                className={`text-sm ${
-                  responseMessage.includes("envoyé") ? "text-green-600" : "text-red-600"
-                }`}
-              >
-                {responseMessage}
-              </p>
-            )}
           </form>
         </CardContent>
       </Card>
