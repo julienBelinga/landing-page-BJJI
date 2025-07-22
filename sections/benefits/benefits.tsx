@@ -1,6 +1,6 @@
 import styles from "./benefits.module.scss";
 import PhoneFrame from "@/components/phoneFrame/phoneFrame";
-import Screen from "@/assets/screenExemple.png";
+import Screen from "@/assets/screenExample.png";
 
 export default function Benefits() {
   return (

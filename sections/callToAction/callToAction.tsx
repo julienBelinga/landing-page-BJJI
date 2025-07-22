@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./callToAction.module.scss";
-import screen from "@/assets/screenExemple.png";
+import screen from "@/assets/screenExample.png";
 import PhoneFrame from "@/components/phoneFrame/phoneFrame";
 import DownloadButton from "@/components/downloadButton/downloadButton";
 
