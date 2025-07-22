@@ -1,9 +1,8 @@
 import Image from "next/image";
 import styles from "./callToAction.module.scss";
 import screen from "@/assets/screenExemple.png";
-import appstore from "@/assets/AppStore.png";
-import googleplay from "@/assets/googeplay.png";
 import PhoneFrame from "@/components/phoneFrame/phoneFrame";
+import DownloadButton from "@/components/downloadButton/downloadButton";
 
 export default function CallToAction() {
   return (
@@ -15,16 +14,8 @@ export default function CallToAction() {
             Commencez à vous connecter avec des athlètes de haut niveau en
             quelques clics.
           </div>
-          <div className={styles.downloads}>
-            <button className={styles.button}>
-              <Image src={appstore} alt="Logo AppStore" />
-            </button>
-            <button className={styles.button}>
-              <Image src={googleplay} alt="Logo GooglePlay" />
-            </button>
-          </div>
+          <DownloadButton />
         </div>
-
         <PhoneFrame screenImage={screen} />
       </div>
     </section>

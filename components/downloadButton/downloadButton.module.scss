@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *;
+
+.downloads {
+  display: flex;
+
+  .button {
+    border: none;
+    border-radius: 12px;
+    margin: 0.5em;
+    padding: 18px 23px;
+    background-color: black;
+
+    img {
+      height: auto;
+      width: 150px;
+    }
+    &:hover {
+      background-color: $background-color-button-hover;
+      transition-duration: 0.4s;
+    }
+  }
+}
