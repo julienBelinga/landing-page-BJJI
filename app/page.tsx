@@ -13,7 +13,6 @@ export default function Home() {
       <Benefits />
       <Functionalities />
       <ExampleAthlete />
-      <Feedbacks />
       <AthleteQuote />
       <CallToAction />
     </>

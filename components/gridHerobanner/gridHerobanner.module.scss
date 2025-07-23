@@ -129,6 +129,24 @@
   border-radius: 16px;
 }
 
+.placeholderImage {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #5994ed, #81b1fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+
+  span {
+    font-family: $font-title;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
 // Content styles
 .backContent {
   display: flex;

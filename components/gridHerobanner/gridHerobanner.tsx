@@ -38,13 +38,20 @@ export default function GridHerobanner() {
           >
             <div className={styles.cardInner}>
               <div className={styles.cardFront}>
-                <Image
-                  src={expert.profileImageUrl}
-                  alt={expert.name}
-                  fill
-                  className={styles.image}
-                  priority={index === 0}
-                />
+                {expert.profileImageUrl &&
+                expert.profileImageUrl.trim() !== "" ? (
+                  <Image
+                    src={expert.profileImageUrl}
+                    alt={expert.name}
+                    fill
+                    className={styles.image}
+                    priority={index === 0}
+                  />
+                ) : (
+                  <div className={styles.placeholderImage}>
+                    <span>{expert.name.charAt(0)}</span>
+                  </div>
+                )}
               </div>
               <div className={styles.cardBack}>
                 <div className={styles.backContent}>
