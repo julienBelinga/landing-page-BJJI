@@ -2,28 +2,59 @@
 
 .footer {
   background-color: $background-color-footer;
-  padding: 0.5em 1em;
+  padding: 2rem 2rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
 
   .footerTitle {
-    color: $text-color-light;
+    color: $text-color-dark;
     font-family: $font-bar-title;
     font-size: $font-size-title-navbar;
+    margin-bottom: 0.5rem;
   }
+
   .footerText {
-    color: $text-color-light;
+    color: $text-color-dark;
     font-family: $font-text;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 300px;
   }
 
   .footerDownloadList,
   .footerTermsList {
-    color: $text-color-light;
+    color: $text-color-dark;
     font-family: $font-text;
     list-style: none;
+    margin: 0;
+    padding: 0;
 
     .footerListTitle {
       font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      color: $text-color-dark;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+
+      &:not(.footerListTitle) {
+        a {
+          color: $text-color-dark;
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $text-color-light-blue;
+          }
+        }
+      }
     }
   }
 }
@@ -31,16 +62,69 @@
 //RESPONSIVE
 @media (max-width: 1000px) {
   .footer {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+
     .footerTitle {
       font-size: $font-size-title-navbar-1000px;
+    }
+
+    .footerText {
+      font-size: 0.8rem;
+    }
+
+    .footerDownloadList,
+    .footerTermsList {
+      .footerListTitle {
+        font-size: 0.9rem;
+      }
+
+      li:not(.footerListTitle) a {
+        font-size: 0.8rem;
+      }
     }
   }
 }
 
 @media (max-width: 800px) {
   .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+
     .footerTitle {
       font-size: $font-size-title-navbar-800px;
+    }
+
+    .footerText {
+      max-width: 100%;
+      font-size: 0.8rem;
+    }
+
+    .footerDownloadList,
+    .footerTermsList {
+      .footerListTitle {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      li:not(.footerListTitle) a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .footer {
+    padding: 1rem 0.5rem;
+
+    .footerDownloadList,
+    .footerTermsList {
+      li {
+        margin-bottom: 0.4rem;
+      }
     }
   }
 }

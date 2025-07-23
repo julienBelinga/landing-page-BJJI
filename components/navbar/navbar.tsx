@@ -7,25 +7,14 @@ export default function Navbar() {
       <Link href="/" className={styles.navbarLink}>
         <h4 className={styles.navbarTitle}>BJJ Insight</h4>
       </Link>
-
-      <ul className={styles.navbarList}>
-        <Link href="Athletes" className={styles.navbarLinkList}>
-          <li className={styles.navbarListElement}>Les athlètes</li>
-        </Link>
-
-        <Link href="/" className={styles.navbarLinkList}>
-          <li className={styles.navbarListElement}>Ipsum</li>
-        </Link>
-
-        <Link href="/" className={styles.navbarLinkList}>
-          <li className={styles.navbarListElement}>Dolor</li>
-        </Link>
-
-        <Link href="/" className={styles.navbarLinkList}>
-          <li className={styles.navbarListElement}>FAQ</li>
-        </Link>
-      </ul>
-      <button className={styles.navbarButton}>Télécharger</button>
+      <Link
+        href="https://apps.apple.com/fr/app/bjj-insight/id6748660983"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.navbarButton}
+      >
+        Télécharger
+      </Link>
     </nav>
   );
 }

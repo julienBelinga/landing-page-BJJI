@@ -5,16 +5,8 @@ export interface Athlete {
   id: string;
   name: string;
   bio?: string;
-  chargesEnabled: boolean;
-  createdAt: Date;
-  currency: string;
-  email: string;
-  fcmToken: string;
   profileImageUrl: string;
   specialization: string;
-  stripeAccountId: string;
-  themes: string[];
-  price: number;
 }
 
 export async function fetchTopAthletes(count: number = 6): Promise<Athlete[]> {
@@ -31,16 +23,8 @@ export async function fetchTopAthletes(count: number = 6): Promise<Athlete[]> {
         id: doc.id,
         name: data.name,
         bio: data.bio,
-        chargesEnabled: data.chargesEnabled,
-        createdAt: data.createdAt.toDate(),
-        currency: data.currency,
-        email: data.email,
-        fcmToken: data.fcmToken,
         profileImageUrl: data.profileImageUrl,
         specialization: data.specialization,
-        stripeAccountId: data.stripeAccountId,
-        themes: data.themes || [],
-        price: data.price,
       });
     });
 

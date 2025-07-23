@@ -15,7 +15,7 @@
   box-sizing: border-box;
 
   .navbarLink {
-    color: $text-color-light;
+    color: white;
     text-decoration: none;
   }
 
@@ -52,11 +52,15 @@
     font-size: $font-size-button-navbar;
     font-weight: bold;
     color: $text-color-light-blue;
+    background-color: $background-color-main-argument;
     padding: 15px 24px;
     border: none;
     border-radius: 5px;
     transition-duration: 0.4s;
     margin-left: auto;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 
     &:hover {
       color: $text-color-light;
