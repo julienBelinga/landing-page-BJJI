@@ -3,7 +3,10 @@
 import { useEffect, useState } from "react";
 import styles from "./gridHerobanner.module.scss";
 import Image from "next/image";
-import { fetchTopAthletes, Athlete } from "../../lib/services/athleteService";
+import {
+  fetchTopAthletesWithPhoto,
+  Athlete,
+} from "../../lib/services/athleteService";
 
 export default function GridHerobanner() {
   const [experts, setExperts] = useState<Athlete[]>([]);
@@ -12,8 +15,9 @@ export default function GridHerobanner() {
   useEffect(() => {
     const loadExperts = async () => {
       try {
-        const athletes = await fetchTopAthletes(6);
+        const athletes = await fetchTopAthletesWithPhoto(6);
         setExperts(athletes);
+        console.log("Athlètes chargés pour la grille:", athletes);
       } catch (error) {
         console.error("Erreur lors du chargement des experts:", error);
       } finally {
@@ -26,6 +30,16 @@ export default function GridHerobanner() {
 
   if (loading) {
     return <div className={styles.gridHerobanner}>Chargement...</div>;
+  }
+
+  if (experts.length === 0) {
+    return (
+      <div className={styles.gridHerobanner}>
+        <div className={styles.noAthletes}>
+          Aucun athlète avec photo trouvé pour le moment.
+        </div>
+      </div>
+    );
   }
 
   return (

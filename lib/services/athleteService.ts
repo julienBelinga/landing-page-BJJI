@@ -213,3 +213,59 @@ export async function fetchTrendingAthletesWithPhoto(
     return [];
   }
 }
+
+export async function fetchTopAthletesWithPhoto(
+  count: number = 6
+): Promise<Athlete[]> {
+  try {
+    const athletesRef = collection(db, "Athletes");
+    // Récupérer plus d'athlètes pour s'assurer d'avoir assez avec des photos
+    const q = query(
+      athletesRef,
+      orderBy("createdAt", "desc"),
+      limit(count * 2) // Récupérer plus pour avoir de la marge
+    );
+
+    const snapshot = await getDocs(q);
+    const athletesWithPhotos: Athlete[] = [];
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      // Filtrer pour garder seulement ceux avec des photos de profil valides
+      if (
+        data.profileImageUrl &&
+        data.profileImageUrl.trim() !== "" &&
+        data.profileImageUrl !== null &&
+        data.profileImageUrl !== undefined
+      ) {
+        athletesWithPhotos.push({
+          id: doc.id,
+          name: data.name,
+          bio: data.bio,
+          chargesEnabled: data.chargesEnabled,
+          createdAt: data.createdAt.toDate(),
+          currency: data.currency,
+          email: data.email,
+          fcmToken: data.fcmToken,
+          profileImageUrl: data.profileImageUrl,
+          specialization: data.specialization,
+          stripeAccountId: data.stripeAccountId,
+          themes: data.themes || [],
+          price: data.price,
+          conversations: data.conversations || 0,
+        });
+      }
+    });
+
+    console.log(
+      `Trouvé ${athletesWithPhotos.length} athlètes avec photos pour la grille`
+    );
+    return athletesWithPhotos.slice(0, count);
+  } catch (error) {
+    console.error(
+      "Erreur lors de la récupération des athlètes avec photo pour la grille:",
+      error
+    );
+    return [];
+  }
+}

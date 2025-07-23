@@ -15,6 +15,14 @@
   @media (min-width: 900px) {
     padding: 24px;
   }
+
+  .noAthletes {
+    text-align: center;
+    font-family: $font-text;
+    font-size: $font-size-text-main;
+    color: $text-color-light;
+    padding: 2rem;
+  }
 }
 
 .grid {
