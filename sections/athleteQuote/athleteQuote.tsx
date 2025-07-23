@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./athleteQuote.module.scss";
 import johnDanaherImg from "@/assets/John Danaher.png";
-import craigJonesImg from "@/assets/Craig.png";
+import craigJonesImg from "@/assets/craig.jpg";
 import joeRoganImg from "@/assets/Joe Rogan.png";
 
 interface Quote {
@@ -43,7 +43,7 @@ export default function AthleteQuote() {
       setCurrentQuoteIndex((prevIndex) =>
         prevIndex === quotes.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change toutes les 5 secondes
+    }, 8000); // Change toutes les 5 secondes
 
     return () => clearInterval(interval);
   }, []);
