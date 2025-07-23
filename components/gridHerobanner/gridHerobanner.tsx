@@ -29,7 +29,27 @@ export default function GridHerobanner() {
   }, []);
 
   if (loading) {
-    return <div className={styles.gridHerobanner}>Chargement...</div>;
+    return (
+      <article className={styles.gridHerobanner}>
+        <div className={styles.grid}>
+          {/* Affichage de skeleton cards pendant le chargement */}
+          {Array.from({ length: 6 }).map((_, index) => (
+            <div
+              key={`skeleton-${index}`}
+              className={`${styles.card} ${styles[`card${index + 1}`]} ${
+                styles.skeleton
+              }`}
+            >
+              <div className={styles.cardInner}>
+                <div className={styles.cardFront}>
+                  <div className={styles.skeletonImage}></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </article>
+    );
   }
 
   if (experts.length === 0) {
