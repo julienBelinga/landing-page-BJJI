@@ -9,7 +9,6 @@
   .benefitsContainer {
     display: flex;
     padding: 1.5em;
-    margin-bottom: -580px;
 
     .benefitsText {
       color: $text-color-dark;
@@ -21,6 +20,21 @@
 }
 
 //RESPONSIVE
+@media (max-width: 1070px) {
+  .benefits {
+    .benefitsContainer {
+      flex-direction: column;
+      margin-bottom: 0;
+      padding: 1.5em 1em;
+
+      .benefitsText {
+        padding-top: 0;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .benefits {
     .benefitsTitle {
@@ -28,7 +42,8 @@
     }
 
     .benefitsContainer {
-      flex-direction: column;
+      padding: 1em;
+
       .benefitsText {
         font-size: $font-size-text-main-8OOpx;
       }
@@ -41,8 +56,13 @@
     .benefitsTitle {
       font-size: $font-size-title-main-650px;
     }
-    .benefitsText {
-      font-size: $font-size-text-main-65Opx;
+
+    .benefitsContainer {
+      padding: 0.5em;
+
+      .benefitsText {
+        font-size: $font-size-text-main-65Opx;
+      }
     }
   }
 }

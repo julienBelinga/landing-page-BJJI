@@ -14,8 +14,8 @@ export default function PhoneFrame({
 }: PhoneFrameProps) {
   return (
     <div className={styles.benefitsImage}>
-      <Image className={styles.phoneScreen} src={screenImage} alt={screenAlt} />
       <Image className={styles.phoneFrame} src={Frame} alt="Frame iPhone 13" />
+      <Image className={styles.phoneScreen} src={screenImage} alt={screenAlt} />
     </div>
   );
 }

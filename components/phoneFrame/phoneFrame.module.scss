@@ -1,20 +1,93 @@
 .benefitsImage {
   margin: 2em 7.5em;
+  position: relative;
 
   .phoneFrame {
     position: relative;
     height: 600px;
     width: auto;
-    top: -586px;
+    top: 0;
     right: 9px;
     overflow-x: hidden;
+    z-index: 1;
   }
 
   .phoneScreen {
+    position: absolute;
     height: 575px;
     width: 280px;
     border-radius: 30px;
     object-fit: cover;
     overflow-x: hidden;
+    top: 14px;
+    right: 22px;
+  }
+}
+
+// RESPONSIVE
+
+@media (max-width: 1070px) {
+  .benefitsImage {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .phoneFrame {
+      position: relative;
+      top: 0;
+      right: 0;
+      height: 500px;
+      z-index: 2;
+    }
+
+    .phoneScreen {
+      position: absolute;
+      height: 475px;
+      width: 230px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .benefitsImage {
+    .phoneFrame {
+      height: 450px;
+    }
+
+    .phoneScreen {
+      height: 425px;
+      width: 210px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .benefitsImage {
+    .phoneFrame {
+      height: 400px;
+    }
+
+    .phoneScreen {
+      height: 375px;
+      width: 185px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .benefitsImage {
+    .phoneFrame {
+      height: 350px;
+    }
+
+    .phoneScreen {
+      height: 325px;
+      width: 160px;
+    }
   }
 }
