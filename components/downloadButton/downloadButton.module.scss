@@ -2,6 +2,8 @@
 
 .downloads {
   display: flex;
+  justify-content: center;
+  gap: 1rem;
 
   .button {
     border: none;
@@ -9,11 +11,16 @@
     margin: 0.5em;
     padding: 18px 23px;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     img {
       height: auto;
       width: 150px;
+      display: block;
     }
+
     &:hover {
       background-color: $background-color-button-hover;
       transition-duration: 0.4s;
