@@ -71,7 +71,14 @@ export default function ExampleAthlete() {
               </div>
             </div>
 
-            <button className={styles.ctaButton}>Devenir un expert</button>
+            <a
+              href="https://apps.apple.com/fr/app/bjj-insight/id6748660983"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaButton}
+            >
+              Devenir un expert
+            </a>
           </div>
 
           <div className={styles.rightContent}>
