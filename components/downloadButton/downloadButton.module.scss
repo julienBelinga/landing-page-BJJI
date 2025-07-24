@@ -30,14 +30,17 @@
   }
 }
 
-// RESPONSIVE
 @media (max-width: 1000px) {
   .downloads {
     gap: 0.8rem;
+    flex-direction: column;
+    align-items: center;
 
     .button {
       padding: 16px 20px;
-      margin: 0.4em;
+      margin: 0.3em;
+      width: 100%;
+      max-width: 280px;
 
       img {
         width: 140px;
@@ -52,8 +55,8 @@
 
     .button {
       padding: 14px 18px;
-      margin: 0.3em;
       border-radius: 10px;
+      max-width: 260px;
 
       img {
         width: 130px;

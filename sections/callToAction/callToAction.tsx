@@ -1,7 +1,5 @@
 import Image from "next/image";
 import styles from "./callToAction.module.scss";
-import screen from "@/assets/screenExample.png";
-import PhoneFrame from "@/components/phoneFrame/phoneFrame";
 import DownloadButton from "@/components/downloadButton/downloadButton";
 
 export default function CallToAction() {
@@ -16,7 +14,6 @@ export default function CallToAction() {
           </div>
           <DownloadButton />
         </div>
-        <PhoneFrame screenImage={screen} />
       </div>
     </section>
   );
