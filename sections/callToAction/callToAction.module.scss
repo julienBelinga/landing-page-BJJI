@@ -30,6 +30,113 @@
     }
 
     .callToActionImage {
+      width: 40%;
+    }
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 1000px) {
+  .callToAction {
+    margin-top: 4rem;
+
+    .callToActionTitle {
+      font-size: $font-size-title-main-800px;
+    }
+
+    .callToActionContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .callToActionDisplay {
+        width: 100%;
+
+        .callToActionText {
+          font-size: 2rem;
+          padding: 0 1rem;
+        }
+      }
+
+      .callToActionImage {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .callToAction {
+    margin-top: 3rem;
+    padding: 0 1rem;
+
+    .callToActionTitle {
+      font-size: $font-size-title-main-650px;
+    }
+
+    .callToActionContainer {
+      gap: 1.5rem;
+
+      .callToActionDisplay {
+        .callToActionText {
+          font-size: $font-size-text-main-8OOpx;
+          padding: 0;
+        }
+      }
+
+      .callToActionImage {
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .callToAction {
+    margin-top: 2rem;
+
+    .callToActionTitle {
+      font-size: $font-size-title-main-650px;
+    }
+
+    .callToActionContainer {
+      gap: 1rem;
+
+      .callToActionDisplay {
+        .callToActionText {
+          font-size: $font-size-text-main-65Opx;
+          line-height: 1.3;
+        }
+      }
+
+      .callToActionImage {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .callToAction {
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
+
+    .callToActionTitle {
+      font-size: 2rem;
+    }
+
+    .callToActionContainer {
+      .callToActionDisplay {
+        .callToActionText {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .callToActionImage {
+        max-width: 250px;
+      }
     }
   }
 }
