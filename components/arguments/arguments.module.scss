@@ -1,5 +1,25 @@
 @use "../../styles/variables" as *;
 
+.arguments {
+  .argumentsTitle {
+    color: $text-color-dark-blue;
+    font-family: $font-title;
+    font-size: $font-size-title-main;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .argumentsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .arguementText {
+      color: $text-color-dark;
+    }
+  }
+}
+
 .argument {
   display: flex;
 
@@ -15,7 +35,7 @@
   }
 }
 .userArgument {
-  color: $text-color-dark;
+  color: $text-color-light;
   text-align: right;
   padding-right: 2.5em;
 }

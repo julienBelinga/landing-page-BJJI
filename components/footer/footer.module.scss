@@ -10,14 +10,14 @@
   gap: 2rem;
 
   .footerTitle {
-    color: $text-color-dark;
+    color: $text-color-light;
     font-family: $font-bar-title;
     font-size: $font-size-title-navbar;
     margin-bottom: 0.5rem;
   }
 
   .footerText {
-    color: $text-color-dark;
+    color: $text-color-light;
     font-family: $font-text;
     font-weight: normal;
     font-size: 0.9rem;
@@ -27,7 +27,7 @@
 
   .footerDownloadList,
   .footerTermsList {
-    color: $text-color-dark;
+    color: $text-color-light;
     font-family: $font-text;
     list-style: none;
     margin: 0;
@@ -37,7 +37,7 @@
       font-weight: bold;
       font-size: 1rem;
       margin-bottom: 0.75rem;
-      color: $text-color-dark;
+      color: $text-color-light;
     }
 
     li {
@@ -45,7 +45,7 @@
 
       &:not(.footerListTitle) {
         a {
-          color: $text-color-dark;
+          color: $text-color-light;
           text-decoration: none;
           font-size: 0.9rem;
           transition: color 0.3s ease;
