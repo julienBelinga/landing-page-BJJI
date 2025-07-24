@@ -71,6 +71,7 @@
 
     .footerText {
       font-size: 0.8rem;
+      max-width: 250px;
     }
 
     .footerDownloadList,
@@ -90,8 +91,9 @@
   .footer {
     flex-direction: column;
     text-align: center;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+    align-items: center;
 
     .footerTitle {
       font-size: $font-size-title-navbar-800px;
@@ -99,6 +101,36 @@
 
     .footerText {
       max-width: 100%;
+      font-size: 0.85rem;
+    }
+
+    .footerDownloadList,
+    .footerTermsList {
+      width: 100%;
+      max-width: 200px;
+
+      .footerListTitle {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      li:not(.footerListTitle) a {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .footer {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+
+    .footerTitle {
+      font-size: $font-size-text-navbar-650px;
+    }
+
+    .footerText {
       font-size: 0.8rem;
     }
 
@@ -109,21 +141,73 @@
         margin-bottom: 0.5rem;
       }
 
-      li:not(.footerListTitle) a {
-        font-size: 0.8rem;
+      li {
+        margin-bottom: 0.4rem;
+
+        &:not(.footerListTitle) a {
+          font-size: 0.8rem;
+        }
       }
     }
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 480px) {
   .footer {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.75rem;
+    gap: 0.75rem;
+
+    .footerTitle {
+      font-size: 1.5rem;
+    }
+
+    .footerText {
+      font-size: 0.75rem;
+      line-height: 1.3;
+    }
 
     .footerDownloadList,
     .footerTermsList {
-      li {
+      max-width: 180px;
+
+      .footerListTitle {
+        font-size: 0.85rem;
         margin-bottom: 0.4rem;
+      }
+
+      li {
+        margin-bottom: 0.3rem;
+
+        &:not(.footerListTitle) a {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .footer {
+    padding: 0.75rem 0.5rem;
+
+    .footerTitle {
+      font-size: 1.3rem;
+    }
+
+    .footerText {
+      font-size: 0.7rem;
+    }
+
+    .footerDownloadList,
+    .footerTermsList {
+      max-width: 160px;
+
+      .footerListTitle {
+        font-size: 0.8rem;
+      }
+
+      li:not(.footerListTitle) a {
+        font-size: 0.7rem;
       }
     }
   }
