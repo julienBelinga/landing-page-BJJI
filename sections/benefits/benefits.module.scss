@@ -1,0 +1,68 @@
+@use "../../styles/variables" as *;
+
+.benefits {
+  .benefitsTitle {
+    color: $text-color-dark-blue;
+    font-family: $font-title;
+    font-size: $font-size-title-main;
+  }
+  .benefitsContainer {
+    display: flex;
+    padding: 1.5em;
+
+    .benefitsText {
+      color: $text-color-dark;
+      font-family: $font-text;
+      font-size: $font-size-text-main;
+      padding-top: 1.5em;
+    }
+  }
+}
+
+//RESPONSIVE
+@media (max-width: 1070px) {
+  .benefits {
+    .benefitsContainer {
+      flex-direction: column;
+      margin-bottom: 0;
+      padding: 1.5em 1em;
+
+      .benefitsText {
+        padding-top: 0;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .benefits {
+    .benefitsTitle {
+      font-size: $font-size-title-main-800px;
+    }
+
+    .benefitsContainer {
+      padding: 1em;
+
+      .benefitsText {
+        font-size: $font-size-text-main-8OOpx;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .benefits {
+    .benefitsTitle {
+      font-size: $font-size-title-main-650px;
+    }
+
+    .benefitsContainer {
+      padding: 0.5em;
+
+      .benefitsText {
+        font-size: $font-size-text-main-65Opx;
+      }
+    }
+  }
+}

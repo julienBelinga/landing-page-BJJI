@@ -1,0 +1,190 @@
+@use "../../styles/variables" as *;
+
+.athleteQuote {
+  position: relative;
+  padding: 2rem 1rem;
+
+  .athleteQuoteBackground {
+    background-color: $background-color-main-quote;
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 8rem; // Espace pour l'image qui dépasse
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-height: 200px;
+
+    .quoteContent {
+      text-align: center;
+      padding: 2rem 3rem;
+      margin-top: 4rem; // Espace pour l'image
+    }
+
+    .athleteQuoteText {
+      color: $text-color-dark;
+      font-family: $font-text;
+      font-size: $font-size-text-main;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .authorName {
+      color: $text-color-dark-blue;
+      font-family: $font-title;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .imageContainer {
+      position: absolute;
+      top: -6rem; // Image qui dépasse au-dessus de la carte
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      z-index: 10;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  .quoteIndicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid $text-color-light-blue;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(129, 177, 250, 0.3);
+        transform: scale(1.1);
+      }
+
+      &.active {
+        background: $text-color-light-blue;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 1000px) {
+  .athleteQuote {
+    padding: 1.5rem 1rem;
+
+    .athleteQuoteBackground {
+      margin-top: 6rem;
+      padding: 1.5rem;
+
+      .quoteContent {
+        padding: 1.5rem 2rem;
+        margin-top: 3rem;
+      }
+
+      .athleteQuoteText {
+        font-size: $font-size-text-main-8OOpx;
+      }
+
+      .authorName {
+        font-size: 1.2rem;
+      }
+
+      .imageContainer {
+        top: -4rem;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .athleteQuote {
+    padding: 1rem 0.5rem;
+
+    .athleteQuoteBackground {
+      margin-top: 5rem;
+      padding: 1rem;
+
+      .quoteContent {
+        padding: 1rem 1.5rem;
+        margin-top: 2.5rem;
+      }
+
+      .athleteQuoteText {
+        font-size: $font-size-text-main-65Opx;
+      }
+
+      .authorName {
+        font-size: 1rem;
+      }
+
+      .imageContainer {
+        top: -3rem;
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    .quoteIndicators {
+      margin-top: 1.5rem;
+      gap: 0.6rem;
+
+      .indicator {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .athleteQuote {
+    .athleteQuoteBackground {
+      margin-top: 4rem;
+
+      .quoteContent {
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      .athleteQuoteText {
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      .authorName {
+        font-size: 0.9rem;
+      }
+
+      .imageContainer {
+        top: -2.5rem;
+        width: 100px;
+        height: 100px;
+
+        img {
+          border: 3px solid white;
+        }
+      }
+    }
+  }
+}

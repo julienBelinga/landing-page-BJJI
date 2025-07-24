@@ -1,0 +1,19 @@
+@use "../../styles/variables" as *;
+
+.functionalities {
+  .functionalitiesTitle {
+    color: $text-color-dark-blue;
+    font-family: $font-title;
+    font-size: $font-size-title-main;
+  }
+
+  .functionalitiesContainer {
+    color: $text-color-dark;
+    font-family: $font-text;
+    font-size: $font-size-text-main;
+
+    .functionalitiesArguments {
+      margin: 3em 0em;
+    }
+  }
+}

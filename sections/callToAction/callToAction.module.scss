@@ -1,0 +1,118 @@
+@use "../../styles/variables" as *;
+
+.callToAction {
+  margin-top: 5.5em;
+
+  .callToActionTitle {
+    color: $text-color-dark-blue;
+    font-family: $font-title;
+    font-size: $font-size-title-main;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .callToActionContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+
+    .callToActionDisplay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+
+      .callToActionText {
+        color: $text-color-light-blue;
+        font-family: $font-title;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 1000px) {
+  .callToAction {
+    margin-top: 4rem;
+
+    .callToActionTitle {
+      font-size: $font-size-title-main-800px;
+    }
+
+    .callToActionContainer {
+      padding: 0 1.5rem;
+
+      .callToActionDisplay {
+        max-width: 600px;
+
+        .callToActionText {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .callToAction {
+    margin-top: 3rem;
+
+    .callToActionTitle {
+      font-size: $font-size-title-main-650px;
+    }
+
+    .callToActionContainer {
+      padding: 0 1rem;
+
+      .callToActionDisplay {
+        .callToActionText {
+          font-size: $font-size-text-main-8OOpx;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .callToAction {
+    margin-top: 2rem;
+
+    .callToActionTitle {
+      font-size: $font-size-title-main-650px;
+    }
+
+    .callToActionContainer {
+      padding: 0 0.5rem;
+
+      .callToActionDisplay {
+        .callToActionText {
+          font-size: $font-size-text-main-65Opx;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .callToAction {
+    margin-top: 1.5rem;
+
+    .callToActionTitle {
+      font-size: 2rem;
+    }
+
+    .callToActionContainer {
+      .callToActionDisplay {
+        .callToActionText {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
