@@ -1,11 +1,18 @@
 import Link from "next/link";
 import styles from "./navbar.module.scss";
 
-export default function Navbar() {
+interface NavbarProps {
+  translations: {
+    title: string;
+    download: string;
+  };
+}
+
+export default function Navbar({ translations }: NavbarProps) {
   return (
     <nav className={styles.navbar}>
-      <Link href="/" className={styles.navbarLink}>
-        <h4 className={styles.navbarTitle}>BJJ Insight</h4>
+      <Link href="./" className={styles.navbarLink}>
+        <h4 className={styles.navbarTitle}>{translations.title}</h4>
       </Link>
       <Link
         href="https://apps.apple.com/fr/app/bjj-insight/id6748660983"
@@ -13,7 +20,7 @@ export default function Navbar() {
         rel="noopener noreferrer"
         className={styles.navbarButton}
       >
-        Télécharger
+        {translations.download}
       </Link>
     </nav>
   );

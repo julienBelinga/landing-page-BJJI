@@ -1,0 +1,90 @@
+{
+  "navbar": {
+    "title": "BJJ Insight",
+    "download": "Télécharger"
+  },
+  "footer": {
+    "title": "BJJ Insight",
+    "description": "Conseils personnalisés de vos athlètes préférés.",
+    "download": "Télécharger",
+    "ios": "iOS",
+    "android": "Android",
+    "legal": "Légal",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "refundPolicy": "Politique de remboursement",
+    "deleteData": "Supprimer mes données",
+    "support": "Support",
+    "language": "Langue"
+  },
+  "herobanner": {
+    "title1": "Progresse avec ceux qui t'inspirent.",
+    "title2": "Ask. Learn. Connect."
+  },
+  "benefits": {
+    "title": "Bénéfices pour les utilisateurs",
+    "description": "Avec BJJ Insight, vous posez une question précise sur votre pratique, technique, stratégie, préparation mentale ou même récupération et vous recevez une réponse claire, directe, et personnalisée par un athlète confirmé. Plus besoin de chercher dans des heures de vidéos génériques : vous gagnez du temps, vous progressez plus vite, et vous profitez de l'expérience de ceux qui vivent le haut niveau au quotidien."
+  },
+  "functionalities": {
+    "title": "Fonctionnalités clés",
+    "feature1": "Pose une question en 1 clic, reçois une réponse vidéo personnalisée.",
+    "feature2": "Demande des conseils techniques, mentaux ou stratégiques.",
+    "feature3": "Accède à des athlètes du monde entier.",
+    "iconAlt": "Icône fonctionnalité"
+  },
+  "exampleAthlete": {
+    "title": "Devenez un Expert",
+    "subtitle": "Arrêtez de donner des conseils gratuitement.",
+    "benefit1": "Partagez votre expertise avec les pratiquants de Jiu-Jitsu du monde entier et développez votre communauté.",
+    "benefit1Prefix": "Partagez votre expertise avec les pratiquants de",
+    "benefit1Highlight": "Jiu-Jitsu",
+    "benefit1Suffix": "du monde entier et développez votre communauté.",
+    "benefit2": "Monétisez votre temps en proposant des consultations 1-1 et des formations personnalisées à votre audience.",
+    "ctaButton": "Devenir un expert",
+    "loading": "Chargement des témoignages d'experts...",
+    "defaultQuote": "Expert passionné de Jiu-Jitsu brésilien, je partage mon expertise et mes connaissances avec la communauté BJJI pour aider chaque pratiquant à progresser dans sa discipline.",
+    "expertTitle": "Expert en Jiu-Jitsu Brésilien",
+    "fallbackQuote": "BJJI m'a permis de connecter avec une communauté passionnée de Jiu-Jitsu et de partager mon expertise avec des pratiquants du monde entier.",
+    "fallbackAuthor": "Expert BJJI, Instructeur certifié"
+  },
+  "callToAction": {
+    "title": "Télécharger",
+    "description": "Commencez à vous connecter avec des athlètes de haut niveau en quelques clics."
+  },
+  "athleteQuote": {
+    "quoteLabel": "Citation {{number}}"
+  },
+  "onboardingBeta": {
+    "title": "🔓 Accès Bêta Fermée",
+    "subtitle": "BJJ Insight est actuellement en phase de bêta fermée.",
+    "autoAccept": "Toutes les demandes sont acceptées automatiquement !",
+    "howToAccess": "Comment accéder à la bêta ?",
+    "description": "Il vous suffit de renseigner l'adresse e-mail associée à votre compte Google Play Store ci-dessous.",
+    "descriptionLine2": "Vous recevrez automatiquement un lien pour télécharger l'application sur le Play Store.",
+    "inputHint": "Utilisez la même adresse e-mail que votre compte Google Play Store",
+    "emailLabel": "Adresse e-mail Google Play Store *",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "submitButton": "Demander l'accès",
+    "submitting": "Envoi en cours...",
+    "afterRequest": "Après votre demande",
+    "emailStep": "📧 Vous recevrez un e-mail avec le lien Play Store",
+    "downloadStep": "📱 Vous pourrez alors télécharger et tester l'application immédiatement"
+  },
+  "support": {
+    "title": "Support utilisateur",
+    "description": "Besoin d'aide ? Posez vos questions ici ou écrivez-nous directement à",
+    "email": "julienbelinga.pro@gmail.com",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "messagePlaceholder": "Décrivez votre problème ou votre question",
+    "submitButton": "Envoyer",
+    "submitting": "Envoi en cours...",
+    "hiddenSubject": "Nouveau message de support"
+  },
+  "common": {
+    "appName": "BJJ Insight",
+    "appStoreAlt": "Logo AppStore",
+    "googlePlayAlt": "Logo GooglePlay",
+    "loading": "Chargement...",
+    "loadingPage": "Chargement de la page..."
+  }
+}

@@ -1,31 +1,38 @@
+"use client";
+
+import { useTranslation } from "@/lib/useTranslation";
 import styles from "./functionalities.module.scss";
 import Arguments from "@/components/arguments/arguments";
-import icon from "@/assets/icon.png";
+import icon from "@/assets/logo.png";
 
 export default function Functionalities() {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.functionalities}>
-      <div className={styles.functionalitiesTitle}>Fonctionnalités clés</div>
+      <div className={styles.functionalitiesTitle}>
+        {t("functionalities.title")}
+      </div>
       <div className={styles.functionalitiesContainer}>
         <Arguments
           className={styles.functionalitiesArguments}
           image={icon}
-          description="Icône fonctionnalité"
-          text="Pose une question en 1 clic, reçois une réponse vidéo personnalisée."
+          description={t("functionalities.iconAlt")}
+          text={t("functionalities.feature1")}
         />
 
         <Arguments
           className={styles.functionalitiesArguments}
           image={icon}
-          description="Icône fonctionnalité"
-          text="Demande des conseils techniques, mentaux ou stratégiques."
+          description={t("functionalities.iconAlt")}
+          text={t("functionalities.feature2")}
         />
 
         <Arguments
           className={styles.functionalitiesArguments}
           image={icon}
-          description="Icône fonctionnalité"
-          text="Accède à des athlètes du monde entier."
+          description={t("functionalities.iconAlt")}
+          text={t("functionalities.feature3")}
         />
       </div>
     </section>

@@ -1,0 +1,73 @@
+@import "@/styles/variables";
+
+.languageSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+  }
+
+  .languageOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .languageButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: white;
+    }
+
+    &.active {
+      color: white;
+      font-weight: 500;
+    }
+
+    .flag {
+      font-size: 1.2rem;
+    }
+
+    .name {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .languageOptions {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .languageButton {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.25rem;
+
+      .flag {
+        font-size: 1.5rem;
+      }
+
+      .name {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
