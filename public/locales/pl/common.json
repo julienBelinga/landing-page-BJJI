@@ -86,5 +86,56 @@
     "googlePlayAlt": "Logo GooglePlay",
     "loading": "Ładowanie...",
     "loadingPage": "Ładowanie strony..."
+  },
+  "metadata": {
+    "home": {
+      "title": "BJJ Insight - Spersonalizowane Porady od Twoich Ulubionych Sportowców",
+      "description": "Połącz się z ekspertami brazylijskiego Jiu-Jitsu i otrzymuj spersonalizowane porady. Zadawaj pytania i rozwijaj się z najlepszymi sportowcami świata.",
+      "keywords": "jiu-jitsu, bjj, sztuki walki, porady, sportowcy, eksperci, coaching, technika, strategia, przygotowanie mentalne",
+      "ogTitle": "BJJ Insight - Platforma Łącząca Pasjonatów z Ekspertami",
+      "ogDescription": "Dołącz do BJJ Insight i uzyskaj dostęp do porad najlepszych sportowców brazylijskiego Jiu-Jitsu na świecie."
+    },
+    "support": {
+      "title": "Wsparcie - BJJ Insight",
+      "description": "Potrzebujesz pomocy? Skontaktuj się z naszym zespołem wsparcia BJJ Insight. Jesteśmy tu, aby odpowiedzieć na wszystkie Twoje pytania.",
+      "keywords": "wsparcie, pomoc, kontakt, asystencja, bjj insight, pytania",
+      "ogTitle": "Wsparcie BJJ Insight - Jesteśmy Tu, Aby Pomóc",
+      "ogDescription": "Skontaktuj się z naszym zespołem wsparcia w sprawie jakichkolwiek pytań dotyczących BJJ Insight."
+    },
+    "onboardingBeta": {
+      "title": "Dostęp Beta - BJJ Insight",
+      "description": "Poproś o dostęp do zamkniętej bety BJJ Insight i odkryj naszą platformę coachingu BJJ w podglądzie.",
+      "keywords": "beta, wczesny dostęp, bjj insight, test, podgląd, coaching",
+      "ogTitle": "Dołącz do Zamkniętej Bety BJJ Insight",
+      "ogDescription": "Bądź wśród pierwszych, którzy przetestują BJJ Insight i uzyskają dostęp do porad najlepszych ekspertów."
+    },
+    "deleteData": {
+      "title": "Usunięcie Danych - BJJ Insight",
+      "description": "Poproś o usunięcie swoich danych osobowych w BJJ Insight z łatwością.",
+      "keywords": "usunięcie danych, RODO, prywatność, dane osobowe",
+      "ogTitle": "Usunięcie Danych - BJJ Insight",
+      "ogDescription": "Skorzystaj z praw RODO i poproś o usunięcie swoich danych w BJJ Insight."
+    },
+    "privacyPolicy": {
+      "title": "Polityka Prywatności - BJJ Insight",
+      "description": "Dowiedz się, jak BJJ Insight chroni i wykorzystuje Twoje dane osobowe. Kompletna polityka prywatności.",
+      "keywords": "prywatność, RODO, dane osobowe, polityka, ochrona",
+      "ogTitle": "Polityka Prywatności - BJJ Insight",
+      "ogDescription": "Pełna transparentność w kwestii zarządzania Twoimi danymi osobowymi w BJJ Insight."
+    },
+    "termsOfService": {
+      "title": "Warunki Korzystania - BJJ Insight",
+      "description": "Przeczytaj warunki korzystania z BJJ Insight. Zasady i warunki korzystania z naszej platformy.",
+      "keywords": "warunki korzystania, zasady, warunki, usługa, bjj insight",
+      "ogTitle": "Warunki Korzystania - BJJ Insight",
+      "ogDescription": "Warunki i zasady korzystania z platformy BJJ Insight."
+    },
+    "refundPolicy": {
+      "title": "Polityka Zwrotów - BJJ Insight",
+      "description": "Odkryj naszą przejrzystą i sprawiedliwą politykę zwrotów dla wszystkich usług BJJ Insight.",
+      "keywords": "zwrot, polityka, zwrot pieniędzy, gwarancja",
+      "ogTitle": "Polityka Zwrotów - BJJ Insight",
+      "ogDescription": "Jasna i sprawiedliwa polityka zwrotów dla wszystkich naszych użytkowników."
+    }
   }
 }

@@ -8,6 +8,7 @@ import ExampleAthlete from "@/sections/exampleAthlete/exampleAthlete";
 import Functionalities from "@/sections/functionalities/functionalities";
 import Herobanner from "@/sections/hero-banner/herobanner";
 import LoadingScreen from "@/components/loadingScreen/loadingScreen";
+import MetaHead from "@/components/metaHead/metaHead";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,7 @@ export default function Home() {
 
   return (
     <>
+      <MetaHead pageKey="home" />
       <Herobanner />
       <Benefits />
       <Functionalities />
