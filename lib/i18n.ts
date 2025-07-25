@@ -1,17 +1,19 @@
 export const defaultLocale = "fr";
-export const locales = ["fr", "en", "pt"] as const;
+export const locales = ["fr", "en", "pt", "pl"] as const;
 export type Locale = (typeof locales)[number];
 
 export const localeNames: Record<Locale, string> = {
   fr: "Français",
   en: "English",
   pt: "Português",
+  pl: "Polski",
 };
 
 export const localeFlags: Record<Locale, string> = {
   fr: "🇫🇷",
   en: "🇺🇸",
   pt: "🇧🇷",
+  pl: "🇵🇱",
 };
 
 export function getLocaleFromPathname(pathname: string): Locale {
