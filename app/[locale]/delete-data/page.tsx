@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import MetaHead from "@/components/metaHead/metaHead";
+
 import styles from "./delete-data.module.scss";
 
 export default function DeleteDataPage() {
