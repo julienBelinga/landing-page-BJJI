@@ -86,5 +86,56 @@
     "googlePlayAlt": "GooglePlay Logo",
     "loading": "Loading...",
     "loadingPage": "Loading page..."
+  },
+  "metadata": {
+    "home": {
+      "title": "BJJ Insight - Personalized Advice from Your Favorite Athletes",
+      "description": "Connect with Brazilian Jiu-Jitsu experts and receive personalized advice. Ask questions and progress with the world's top athletes.",
+      "keywords": "jiu-jitsu, bjj, martial arts, coaching, athletes, experts, technique, strategy, mental preparation",
+      "ogTitle": "BJJ Insight - The Platform Connecting Enthusiasts to Experts",
+      "ogDescription": "Join BJJ Insight and access advice from the world's best Brazilian Jiu-Jitsu athletes."
+    },
+    "support": {
+      "title": "Support - BJJ Insight",
+      "description": "Need help? Contact our BJJ Insight support team. We're here to answer all your questions.",
+      "keywords": "support, help, contact, assistance, bjj insight, questions",
+      "ogTitle": "BJJ Insight Support - We're Here to Help",
+      "ogDescription": "Contact our support team for any questions about BJJ Insight."
+    },
+    "onboardingBeta": {
+      "title": "Beta Access - BJJ Insight",
+      "description": "Request access to BJJ Insight's closed beta and discover our BJJ coaching platform in preview.",
+      "keywords": "beta, early access, bjj insight, test, preview, coaching",
+      "ogTitle": "Join BJJ Insight's Closed Beta",
+      "ogDescription": "Be among the first to test BJJ Insight and access advice from top experts."
+    },
+    "deleteData": {
+      "title": "Data Deletion - BJJ Insight",
+      "description": "Request deletion of your personal data on BJJ Insight with ease.",
+      "keywords": "data deletion, GDPR, privacy, personal data",
+      "ogTitle": "Data Deletion - BJJ Insight",
+      "ogDescription": "Exercise your GDPR rights and request deletion of your data on BJJ Insight."
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy - BJJ Insight",
+      "description": "Learn how BJJ Insight protects and uses your personal data. Complete privacy policy.",
+      "keywords": "privacy, GDPR, personal data, policy, protection",
+      "ogTitle": "Privacy Policy - BJJ Insight",
+      "ogDescription": "Complete transparency on how we handle your personal data at BJJ Insight."
+    },
+    "termsOfService": {
+      "title": "Terms of Service - BJJ Insight",
+      "description": "Read BJJ Insight's terms of service. Rules and conditions for using our platform.",
+      "keywords": "terms of service, rules, terms, service, bjj insight",
+      "ogTitle": "Terms of Service - BJJ Insight",
+      "ogDescription": "Terms and conditions for using the BJJ Insight platform."
+    },
+    "refundPolicy": {
+      "title": "Refund Policy - BJJ Insight",
+      "description": "Discover our transparent and fair refund policy for all BJJ Insight services.",
+      "keywords": "refund, policy, return, money, guarantee",
+      "ogTitle": "Refund Policy - BJJ Insight",
+      "ogDescription": "Clear and fair refund policy for all our users."
+    }
   }
 }
