@@ -14,6 +14,7 @@
   border-radius: 12px;
   border: 1px solid #e5e7eb;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
 .header {
@@ -27,18 +28,16 @@
   color: $text-color-shade;
   margin: 0;
   letter-spacing: 1px;
-
   @media (max-width: 800px) {
     font-size: $font-size-text-main-8OOpx;
   }
-
   @media (max-width: 650px) {
     font-size: $font-size-text-main-65Opx;
   }
 }
 
 .description {
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: #6b7280;
   margin-top: 0.25rem;
   margin-bottom: 0;
@@ -55,13 +54,11 @@
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
-
   .warningText {
     color: #dc2626;
-    font-size: 0.875rem;
+    font-size: 0.95rem;
     margin: 0;
     font-weight: 500;
-
     strong {
       font-weight: 700;
     }
@@ -75,27 +72,25 @@
 }
 
 .input {
-  display: flex;
-  height: 2.5rem;
   width: 100%;
+  box-sizing: border-box;
   border-radius: 6px;
   border: 1px solid #d1d5db;
   background: $background-color-main-argument;
   padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-family: $font-text;
   transition: all 0.2s ease;
-
+  margin: 0;
+  display: block;
   &::placeholder {
     color: #9ca3af;
   }
-
   &:focus {
     outline: none;
     box-shadow: 0 0 0 2px #dc2626;
     border-color: transparent;
   }
-
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
@@ -108,7 +103,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: $font-text;
   transition: all 0.2s ease;
@@ -118,16 +113,14 @@
   border: none;
   height: 2.5rem;
   padding: 0.5rem 1rem;
-
+  margin-top: 0.5rem;
   &:hover:not(:disabled) {
     background: #b91c1c;
   }
-
   &:focus {
     outline: none;
     box-shadow: 0 0 0 2px #dc2626, 0 0 0 4px rgba(220, 38, 38, 0.2);
   }
-
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
@@ -140,7 +133,6 @@
   border-radius: 8px;
   padding: 1rem;
   margin-top: 1.5rem;
-
   .infoTitle {
     font-family: $font-title;
     font-size: 1rem;
@@ -148,10 +140,9 @@
     margin: 0 0 0.5rem 0;
     letter-spacing: 0.5px;
   }
-
   .infoText {
     color: #0369a1;
-    font-size: 0.875rem;
+    font-size: 0.95rem;
     margin: 0;
     line-height: 1.5;
   }
@@ -161,7 +152,6 @@
   .container {
     padding: 1.5rem 1rem;
   }
-
   .card {
     max-width: 100%;
   }
@@ -172,7 +162,6 @@
   .content {
     padding: 1rem;
   }
-
   .title {
     font-size: 1.3rem;
   }
