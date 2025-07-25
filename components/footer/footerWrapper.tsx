@@ -9,7 +9,7 @@ export default function FooterWrapper() {
   if (isLoading) {
     return (
       <footer className="footer_footer__3kcQj">
-        <div>Chargement...</div>
+        <div>{t("common.loading")}</div>
       </footer>
     );
   }

@@ -9,7 +9,7 @@ export default function NavbarWrapper() {
   if (isLoading) {
     return (
       <nav className="navbar_navbar__SBC9f">
-        <div>Chargement...</div>
+        <div>{t("common.loading")}</div>
       </nav>
     );
   }

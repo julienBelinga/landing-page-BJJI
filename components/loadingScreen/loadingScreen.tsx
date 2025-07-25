@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useEffect } from "react";
+import { useTranslation } from "@/lib/useTranslation";
 import styles from "./loadingScreen.module.scss";
 import logo from "@/assets/logo.png";
 
@@ -12,31 +13,22 @@ interface LoadingScreenProps {
 export default function LoadingScreen({
   onLoadingComplete,
 }: LoadingScreenProps) {
-  const [isLoading, setIsLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
-    // Simuler un délai minimum de 2 secondes pour l'effet visuel
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setTimeout(() => {
-        onLoadingComplete();
-      }, 500); // Délai pour l'animation de sortie
-    }, 2000);
+      onLoadingComplete();
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
   return (
-    <div
-      className={`${styles.loadingScreen} ${!isLoading ? styles.fadeOut : ""}`}
-    >
+    <div className={styles.loadingScreen}>
       <div className={styles.logoContainer}>
-        {/* Cercles de pulsation */}
         <div className={styles.pulseRing}></div>
         <div className={styles.pulseRing2}></div>
         <div className={styles.pulseRing3}></div>
-
-        {/* Logo */}
         <div className={styles.logo}>
           <Image
             src={logo}
@@ -49,8 +41,8 @@ export default function LoadingScreen({
       </div>
 
       <div className={styles.loadingText}>
-        <h2>BJJ Insight</h2>
-        <p>Chargement de la page...</p>
+        <h2>{t("common.appName")}</h2>
+        <p>{t("common.loadingPage")}</p>
       </div>
     </div>
   );

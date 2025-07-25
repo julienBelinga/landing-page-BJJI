@@ -83,6 +83,8 @@
   "common": {
     "appName": "BJJ Insight",
     "appStoreAlt": "Logo AppStore",
-    "googlePlayAlt": "Logo GooglePlay"
+    "googlePlayAlt": "Logo GooglePlay",
+    "loading": "Carregando...",
+    "loadingPage": "Carregando página..."
   }
 }
