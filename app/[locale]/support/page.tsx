@@ -14,11 +14,8 @@ export default function SupportPage() {
         <div className={styles.header}>
           <h1 className={styles.title}>{t("support.title")}</h1>
           <p className={styles.description}>
-            Besoin d'aide ? Posez vos questions ici ou écrivez-nous directement
-            à{" "}
-            <a href="mailto:julienbelinga.pro@gmail.com">
-              julienbelinga.pro@gmail.com
-            </a>
+            {t("support.description")}{" "}
+            <a href={`mailto:${t("support.email")}`}>{t("support.email")}</a>
           </p>
         </div>
         <div className={styles.content}>

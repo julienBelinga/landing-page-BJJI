@@ -54,9 +54,11 @@ export default function ExampleAthlete() {
               <div className={styles.benefit}>
                 <div className={styles.checkmark}>✓</div>
                 <p>
-                  Partagez votre expertise avec les pratiquants de{" "}
-                  <span className={styles.highlight}>Jiu-Jitsu</span> du monde
-                  entier et développez votre communauté.
+                  {t("exampleAthlete.benefit1Prefix")}{" "}
+                  <span className={styles.highlight}>
+                    {t("exampleAthlete.benefit1Highlight")}
+                  </span>{" "}
+                  {t("exampleAthlete.benefit1Suffix")}
                 </p>
               </div>
 

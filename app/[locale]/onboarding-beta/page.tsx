@@ -25,11 +25,9 @@ export default function OnboardingBetaPage() {
               {t("onboardingBeta.howToAccess")}
             </h2>
             <p className={styles.description}>
-              Il vous suffit de renseigner l'adresse e-mail associée à votre
-              compte Google Play Store ci-dessous.
+              {t("onboardingBeta.description")}
               <br />
-              Vous recevrez automatiquement un lien pour télécharger
-              l'application sur le Play Store.
+              {t("onboardingBeta.descriptionLine2")}
             </p>
           </div>
 
@@ -55,7 +53,7 @@ export default function OnboardingBetaPage() {
 
             <div className={styles.formGroup}>
               <label htmlFor="email" className={styles.label}>
-                Adresse e-mail Google Play Store *
+                {t("onboardingBeta.emailLabel")}
               </label>
               <input
                 type="email"
@@ -66,8 +64,7 @@ export default function OnboardingBetaPage() {
                 className={styles.input}
               />
               <p className={styles.inputHint}>
-                Utilisez la même adresse e-mail que votre compte Google Play
-                Store
+                {t("onboardingBeta.inputHint")}
               </p>
             </div>
 
@@ -83,13 +80,12 @@ export default function OnboardingBetaPage() {
           </form>
 
           <div className={styles.waitingInfo}>
-            <h3 className={styles.waitingTitle}>Après votre demande</h3>
+            <h3 className={styles.waitingTitle}>
+              {t("onboardingBeta.afterRequest")}
+            </h3>
             <ul className={styles.waitingList}>
-              <li>📧 Vous recevrez un e-mail avec le lien Play Store</li>
-              <li>
-                📱 Vous pourrez alors télécharger et tester l'application
-                immédiatement
-              </li>
+              <li>{t("onboardingBeta.emailStep")}</li>
+              <li>{t("onboardingBeta.downloadStep")}</li>
             </ul>
           </div>
         </div>
