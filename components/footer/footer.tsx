@@ -38,6 +38,12 @@ export default function Footer() {
         <li>
           <Link href="/refund-policy">Politique de remboursement</Link>
         </li>
+        <li>
+          <Link href="/delete-data">Supprimer mes données</Link>
+        </li>
+        <li>
+          <Link href="/support">Support</Link>
+        </li>
       </ul>
     </footer>
   );
