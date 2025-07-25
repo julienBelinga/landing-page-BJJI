@@ -1,6 +1,6 @@
 import styles from "./functionalities.module.scss";
 import Arguments from "@/components/arguments/arguments";
-import icon from "@/assets/icon.png";
+import icon from "@/assets/logo.png";
 
 export default function Functionalities() {
   return (
