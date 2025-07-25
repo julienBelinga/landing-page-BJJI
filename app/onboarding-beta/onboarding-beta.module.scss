@@ -2,11 +2,6 @@
 
 .container {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    $background-color-main 0%,
-    $text-color-light-blue 100%
-  );
   padding: 2rem 1rem;
   display: flex;
   align-items: center;
