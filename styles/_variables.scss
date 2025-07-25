@@ -1,11 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&display=swap");
-
 //FONT
-$font-bar-title: "Gajraj One", sans-serif;
-$font-title: "Bebas Neue", sans-serif;
-$font-text: "Droid Sans", sans-serif;
+@font-face {
+  font-family: "droid-sans";
+  src: url("/http://localhost:3000/fonts/droid-sans/DroidSans.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+$font-bar-title: var(--font-gajraj); // Gajraj One
+$font-title: var(--font-bebas); // Bebas Neue
+$font-text: "droid-sans", "arial";
 
 //TEXT-COLOR
 $text-color-dark: #000000;

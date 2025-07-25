@@ -7,21 +7,17 @@ import { Gajraj_One, Bebas_Neue } from "next/font/google";
 import { locales, Locale } from "@/lib/i18n";
 import { generateDefaultMetadata } from "@/lib/generateMetadata";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-text",
-});
-
+// Importation des polices avec variables CSS personnalisées
 const gajrajOne = Gajraj_One({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-bar-title",
+  variable: "--font-gajraj",
 });
 
 const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-title",
+  variable: "--font-bebas",
 });
 
 export async function generateMetadata({
@@ -45,9 +41,7 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang={params.locale}>
-      <body
-        className={`layout ${inter.variable} ${gajrajOne.variable} ${bebasNeue.variable}`}
-      >
+      <body className={`layout ${gajrajOne.variable} ${bebasNeue.variable}`}>
         <NavbarWrapper />
         <main className="content">{children}</main>
         <FooterWrapper />
