@@ -1,16 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/lib/useTranslation";
 import styles from "./support.module.scss";
 
 export default function SupportPage() {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.header}>
-          <h1 className={styles.title}>Support utilisateur</h1>
+          <h1 className={styles.title}>{t("support.title")}</h1>
           <p className={styles.description}>
             Besoin d'aide ? Posez vos questions ici ou écrivez-nous directement
             à{" "}
@@ -32,7 +34,7 @@ export default function SupportPage() {
             <input
               type="hidden"
               name="_subject"
-              value="Nouveau message de support"
+              value={t("support.hiddenSubject")}
             />
             <input
               type="hidden"
@@ -43,13 +45,13 @@ export default function SupportPage() {
             <input
               type="email"
               name="email"
-              placeholder="Votre adresse e-mail"
+              placeholder={t("support.emailPlaceholder")}
               required
               className={styles.input}
             />
             <textarea
               name="message"
-              placeholder="Décrivez votre problème ou votre question"
+              placeholder={t("support.messagePlaceholder")}
               required
               rows={4}
               className={styles.textarea}
@@ -59,7 +61,9 @@ export default function SupportPage() {
               disabled={isSubmitting}
               className={styles.submitButton}
             >
-              {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+              {isSubmitting
+                ? t("support.submitting")
+                : t("support.submitButton")}
             </button>
           </form>
         </div>

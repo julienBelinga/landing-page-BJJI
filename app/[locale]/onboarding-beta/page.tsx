@@ -1,27 +1,29 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/lib/useTranslation";
 import styles from "./onboarding-beta.module.scss";
 
 export default function OnboardingBetaPage() {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.header}>
-          <h1 className={styles.title}>🔓 Accès Bêta Fermée</h1>
+          <h1 className={styles.title}>{t("onboardingBeta.title")}</h1>
           <p className={styles.subtitle}>
-            BJJ Insight est actuellement en phase de bêta fermée.
+            {t("onboardingBeta.subtitle")}
             <br />
-            <strong>
-              Toutes les demandes sont acceptées automatiquement !
-            </strong>
+            <strong>{t("onboardingBeta.autoAccept")}</strong>
           </p>
         </div>
         <div className={styles.content}>
           <div className={styles.infoSection}>
-            <h2 className={styles.sectionTitle}>Comment accéder à la bêta ?</h2>
+            <h2 className={styles.sectionTitle}>
+              {t("onboardingBeta.howToAccess")}
+            </h2>
             <p className={styles.description}>
               Il vous suffit de renseigner l'adresse e-mail associée à votre
               compte Google Play Store ci-dessous.
@@ -59,7 +61,7 @@ export default function OnboardingBetaPage() {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="votre.email@example.com"
+                placeholder={t("onboardingBeta.emailPlaceholder")}
                 required
                 className={styles.input}
               />
@@ -75,8 +77,8 @@ export default function OnboardingBetaPage() {
               className={styles.submitButton}
             >
               {isSubmitting
-                ? "Envoi en cours..."
-                : "Recevoir le lien Play Store"}
+                ? t("onboardingBeta.submitting")
+                : t("onboardingBeta.submitButton")}
             </button>
           </form>
 

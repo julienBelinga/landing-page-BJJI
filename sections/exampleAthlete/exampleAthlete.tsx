@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "@/lib/useTranslation";
 import styles from "./exampleAthlete.module.scss";
 import {
   fetchTrendingAthletesWithPhoto,
@@ -9,6 +10,7 @@ import {
 } from "../../lib/services/athleteService";
 
 export default function ExampleAthlete() {
+  const { t } = useTranslation();
   const [athletes, setAthletes] = useState<Athlete[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -33,9 +35,7 @@ export default function ExampleAthlete() {
       <section className={styles.exampleAthlete}>
         <div className={styles.container}>
           <div className={styles.content}>
-            <div className={styles.loading}>
-              Chargement des témoignages d'experts...
-            </div>
+            <div className={styles.loading}>{t("exampleAthlete.loading")}</div>
           </div>
         </div>
       </section>
@@ -47,10 +47,8 @@ export default function ExampleAthlete() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.leftContent}>
-            <h2 className={styles.mainTitle}>Devenez un Expert</h2>
-            <p className={styles.subtitle}>
-              Arrêtez de donner des conseils gratuitement.
-            </p>
+            <h2 className={styles.mainTitle}>{t("exampleAthlete.title")}</h2>
+            <p className={styles.subtitle}>{t("exampleAthlete.subtitle")}</p>
 
             <div className={styles.benefits}>
               <div className={styles.benefit}>
@@ -64,10 +62,7 @@ export default function ExampleAthlete() {
 
               <div className={styles.benefit}>
                 <div className={styles.checkmark}>✓</div>
-                <p>
-                  Monétisez votre temps en proposant des consultations 1-1 et
-                  des formations personnalisées à votre audience.
-                </p>
+                <p>{t("exampleAthlete.benefit2")}</p>
               </div>
             </div>
 
@@ -77,7 +72,7 @@ export default function ExampleAthlete() {
               rel="noopener noreferrer"
               className={styles.ctaButton}
             >
-              Devenir un expert
+              {t("exampleAthlete.ctaButton")}
             </a>
           </div>
 
@@ -87,14 +82,11 @@ export default function ExampleAthlete() {
                 <div key={athlete.id} className={styles.testimonial}>
                   <div className={styles.testimonialContent}>
                     <p className={styles.quote}>
-                      "
-                      {athlete.bio ||
-                        "Expert passionné de Jiu-Jitsu brésilien, je partage mon expertise et mes connaissances avec la communauté BJJI pour aider chaque pratiquant à progresser dans sa discipline."}
-                      "
+                      "{athlete.bio || t("exampleAthlete.defaultQuote")}"
                     </p>
                     <div className={styles.author}>
                       <span className={styles.authorName}>
-                        —{athlete.name}, Expert en Jiu-Jitsu Brésilien
+                        —{athlete.name}, {t("exampleAthlete.expertTitle")}
                       </span>
                     </div>
                   </div>
@@ -120,13 +112,11 @@ export default function ExampleAthlete() {
               <div className={styles.testimonial}>
                 <div className={styles.testimonialContent}>
                   <p className={styles.quote}>
-                    "BJJI m'a permis de connecter avec une communauté passionnée
-                    de Jiu-Jitsu et de partager mon expertise avec des
-                    pratiquants du monde entier."
+                    "{t("exampleAthlete.fallbackQuote")}"
                   </p>
                   <div className={styles.author}>
                     <span className={styles.authorName}>
-                      —Expert BJJI, Instructeur certifié
+                      —{t("exampleAthlete.fallbackAuthor")}
                     </span>
                   </div>
                 </div>

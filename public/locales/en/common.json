@@ -1,0 +1,78 @@
+{
+  "navbar": {
+    "title": "BJJ Insight",
+    "download": "Download"
+  },
+  "footer": {
+    "title": "BJJ Insight",
+    "description": "Personalized advice from your favorite athletes.",
+    "download": "Download",
+    "ios": "iOS",
+    "android": "Android",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "refundPolicy": "Refund Policy",
+    "deleteData": "Delete My Data",
+    "support": "Support",
+    "language": "Language"
+  },
+  "herobanner": {
+    "title1": "Progress with those who inspire you.",
+    "title2": "Ask. Learn. Connect."
+  },
+  "benefits": {
+    "title": "User Benefits",
+    "description": "With BJJ Insight, you ask a specific question about your practice, technique, strategy, mental preparation or even recovery and you receive a clear, direct, and personalized answer from a confirmed athlete. No more searching through hours of generic videos: you save time, progress faster, and benefit from the experience of those who live at the highest level daily."
+  },
+  "functionalities": {
+    "title": "Key Features",
+    "feature1": "Ask a question in 1 click, receive a personalized video response.",
+    "feature2": "Request technical, mental or strategic advice.",
+    "feature3": "Access athletes from around the world.",
+    "iconAlt": "Feature icon"
+  },
+  "exampleAthlete": {
+    "title": "Become an Expert",
+    "subtitle": "Stop giving free advice.",
+    "benefit1": "Share your expertise with {{highlight}}Jiu-Jitsu{{/highlight}} practitioners worldwide and grow your community.",
+    "benefit2": "Monetize your time by offering 1-on-1 consultations and personalized training to your audience.",
+    "ctaButton": "Become an expert",
+    "loading": "Loading expert testimonials...",
+    "defaultQuote": "Passionate Brazilian Jiu-Jitsu expert, I share my expertise and knowledge with the BJJI community to help every practitioner progress in their discipline.",
+    "expertTitle": "Brazilian Jiu-Jitsu Expert",
+    "fallbackQuote": "BJJI allowed me to connect with a passionate Jiu-Jitsu community and share my expertise with practitioners from around the world.",
+    "fallbackAuthor": "BJJI Expert, Certified Instructor"
+  },
+  "callToAction": {
+    "title": "Download",
+    "description": "Start connecting with top-level athletes in just a few clicks."
+  },
+  "athleteQuote": {
+    "quoteLabel": "Quote {{number}}"
+  },
+  "onboardingBeta": {
+    "title": "🔓 Closed Beta Access",
+    "subtitle": "BJJ Insight is currently in closed beta phase.",
+    "autoAccept": "All requests are automatically accepted!",
+    "howToAccess": "How to access the beta?",
+    "description": "Simply enter the email address associated with your Google Play Store account below.\nYou will automatically receive a link to download the app from the Play Store.",
+    "emailPlaceholder": "Your email address",
+    "submitButton": "Request access",
+    "submitting": "Sending..."
+  },
+  "support": {
+    "title": "User Support",
+    "description": "Need help? Ask your questions here or write to us directly at {{email}}julienbelinga.pro@gmail.com{{/email}}",
+    "emailPlaceholder": "Your email address",
+    "messagePlaceholder": "Describe your problem or question",
+    "submitButton": "Send",
+    "submitting": "Sending...",
+    "hiddenSubject": "New support message"
+  },
+  "common": {
+    "appName": "BJJ Insight",
+    "appStoreAlt": "AppStore Logo",
+    "googlePlayAlt": "GooglePlay Logo"
+  }
+}
